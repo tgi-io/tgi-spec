@@ -1,0 +1,13 @@
+/**---------------------------------------------------------------------------------------------------------------------
+ * tgi-spec/lib/footer
+ **/
+  /* istanbul ignore next */
+  if (typeof exports !== 'undefined') {
+    if (typeof module !== 'undefined' && module.exports) {
+      exports = module.exports = Spec;
+    }
+    exports.Spec = Spec;
+  } else {
+    root.Spec = Spec;
+  }
+}).call(this);

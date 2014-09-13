@@ -1,0 +1,7 @@
+/**---------------------------------------------------------------------------------------------------------------------
+ * tgi-spec/lib/spec-header
+ **/
+(function () {
+"use strict";
+var root = this;
+var testSpec = function(spec) {
