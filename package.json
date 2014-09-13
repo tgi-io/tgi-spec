@@ -1,0 +1,35 @@
+{
+  "name": "tgi-spec",
+  "version": "0.0.1",
+  "description": "Specs & Test for TGI Application Framework.",
+  "contributors": [
+    {
+      "name": "Sean Smith",
+      "email": "sean@tgicloud.com"
+    }
+  ],
+  "scripts": {
+    "test": "node spec/node-test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tgicloud/tgi-spec.git"
+  },
+  "keywords": [
+    "javascript",
+    "application",
+    "app",
+    "api",
+    "test",
+    "framework"
+  ],
+  "author": "Sean Smith <sean@tgicloud.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "gulp": "^3.8.7",
+    "gulp-concat": "^2.4.0",
+    "gulp-jshint": "^1.8.4",
+    "gulp-rename": "^1.2.0",
+    "gulp-uglify": "^1.0.1"
+  }
+}
