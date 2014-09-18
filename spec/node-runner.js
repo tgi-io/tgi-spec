@@ -11,11 +11,12 @@ spec.runTests(function (msg) {
     console.error(msg.error);
     process.exit(1);
   } else if (msg.done) {
-    console.log('--------------------------------');
-    console.log('Testing completed with no errors');
-    console.log('--------------------------------');
+    console.log('Testing completed with  ...');
+    console.log('testsCreated = ' + msg.testsCreated);
+    console.log('testsPending = ' + msg.testsPending);
+    console.log('testsFailed = ' + msg.testsFailed);
+    if (msg.testsFailed) process.exit(1);
   } else if (msg.log) {
     console.log(msg.log);
   }
-
 });

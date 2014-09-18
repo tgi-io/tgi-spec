@@ -12,29 +12,35 @@ var childProcess = require('child_process');
 
 // Source and packaging
 var libFiles = [
-  'lib/lib-header',
+  'lib/packaging/lib-header',
   'lib/tgi-spec.source.js',
-  'lib/lib-footer'
+  'lib/packaging/lib-footer'
 ];
 
 // The Spec
 var specFiles = [
-  'lib/spec-header',
+  'lib/packaging/spec-header',
   'lib/tgi-spec.test.js',
-  'lib/spec-footer'
+  'lib/packaging/spec-footer'
 ];
 
-// Build Task
-gulp.task('build', function (callback) {
-  gulp.src(libFiles)
+gulp.task('libFiles', function () {
+  return gulp.src(libFiles)
     .pipe(concat('tgi.spec.js'))
     .pipe(gulp.dest('dist'))
     .pipe(rename('tgi.spec.min.js'))
     .pipe(uglify())
     .pipe(gulp.dest('dist'));
-  gulp.src(specFiles)
+});
+
+gulp.task('specFiles', function () {
+  return gulp.src(specFiles)
     .pipe(concat('tgi.spec-test.js'))
-    .pipe(gulp.dest('dist'))
+    .pipe(gulp.dest('dist'));
+});
+
+// Build Task
+gulp.task('build', ['libFiles', 'specFiles'], function (callback) {
   callback();
 });
 
@@ -53,6 +59,15 @@ gulp.task('lint', function (callback) {
 gulp.task('test', ['build'], function (callback) {
   childProcess.exec('node spec/node-runner.js', function (error, stdout, stderr) {
     console.log(stdout);
+    callback(error);
+  });
+});
+
+// Coverage Task
+gulp.task('cover', function (callback) {
+  childProcess.exec('istanbul cover spec/node-runner.js', function (error, stdout, stderr) {
+    console.log(stdout);
+    console.error(stderr);
     callback(error);
   });
 });
