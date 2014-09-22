@@ -15,8 +15,11 @@ spec.runTests(function (msg) {
     console.log('testsCreated = ' + msg.testsCreated);
     console.log('testsPending = ' + msg.testsPending);
     console.log('testsFailed = ' + msg.testsFailed);
-    if (msg.testsFailed) process.exit(1);
+    if (msg.testsFailed || msg.testsPending) process.exit(1);
   } else if (msg.log) {
     console.log(msg.log);
   }
 });
+//setTimeout(function () {
+//  console.log('777');
+//}, 6660);

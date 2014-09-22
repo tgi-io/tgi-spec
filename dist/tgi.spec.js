@@ -18,18 +18,30 @@ Spec.prototype.test = function (testSource, testName, testScript) {
   this.scripts.push({testSource: testSource, testName: testName, testScript: testScript});
 };
 Spec.prototype.runTests = function (callback) {
+  this.callback = callback;
   // Load the scripts
   for (var i = 0; i < this.scripts.length; i++) {
     var script = this.scripts[i];
-    callback({log: 'loading test script: ' + script.testName});
+    this.callback({log: 'loading test script: ' + script.testName});
     script.testScript(callback);
   }
-  callback({
-    done: true,
-    testsCreated: this.testsCreated,
-    testsPending: this.testsPending,
-    testsFailed: this.testsFailed
-  });
+  this.completionCheck();
+};
+Spec.prototype.completionCheck = function (force) {
+  var spec = this;
+  if (!this.testsPending || force) {
+    this.callback({
+      done: true,
+      testsCreated: this.testsCreated,
+      testsPending: this.testsPending,
+      testsFailed: this.testsFailed
+    });
+  } else {
+    // Give time for async to finish
+    this.watchdog = this.watchdog || setTimeout(function () {
+      spec.completionCheck(true); // force completion
+    }, 500);
+  }
 };
 /**
  * Spec.Node object for each piece of spec types as follows:
@@ -47,33 +59,43 @@ Spec.Node = function (args) {
 /**
  * Spec.Test for each example
  */
-Spec.Test = function (spec, results, callback) {
+Spec.Test = function (spec, expectedValue, callback) {
   var test = this;
-  var testResults;
+  var testExpectedValue;
   var testReturnValue;
   spec.testsCreated++;
   spec.testsPending++;
-  test.results = results;
+  test.expectedValue = expectedValue;
   test.callback = callback;
   test.testThrown = false;
+  test.testAsync = false;
   try {
-    var returnValue = test.callback(test, function () {
-      console.log('this be stubbed');
+    var returnValue = test.callback(function (callbackReturns) {
+      spec.testsPending--;
+      if (typeof expectedValue !== 'undefined' && expectedValue.async) {
+        console.log('shizzle = ' + JSON.stringify(callbackReturns));
+        console.log('test.expectedValue.expectedValue = ' + JSON.stringify(test.expectedValue.expectedValue));
+        if (test.expectedValue.expectedValue !== callbackReturns) {
+          spec.testsFailed++;
+        }
+      }
     });
-    if (typeof results !== 'undefined') {
-      testResults = results instanceof Error ? results.toString() : results;
+    if (typeof expectedValue !== 'undefined') {
+      test.testAsync = expectedValue.async;
+      testExpectedValue = expectedValue instanceof Error ? expectedValue.toString() : expectedValue;
       testReturnValue = returnValue instanceof Error ? returnValue.toString() : returnValue;
-      if (testResults !== testReturnValue) {
+      if (!test.testAsync && testExpectedValue !== testReturnValue) {
         spec.testsFailed++;
       }
     }
   } catch (e) {
     test.testThrown = true;
-    if (typeof results === 'undefined' || !(results instanceof Error) || e.toString() !== results.toString()) {
+    if (typeof expectedValue === 'undefined' || !(expectedValue instanceof Error) || e.toString() !== expectedValue.toString()) {
       spec.testsFailed++;
     }
   }
-  spec.testsPending--;
+  if (!test.testAsync)
+    spec.testsPending--;
 };
 /**
  * Create a heading node
@@ -82,6 +104,7 @@ Spec.prototype.heading = function (text, func) {
   if (typeof text !== 'string' || text === '') {
     throw new Error('Spec.heading requires text argument');
   }
+  this.callback({log: 'heading: ' + text});
   var node = new Spec.Node({type: 'h'});
   node.text = text;
   this.nodes.push(node);
@@ -95,6 +118,7 @@ Spec.prototype.paragraph = function (text) {
   if (typeof text !== 'string' || text === '') {
     throw new Error('Spec.paragraph requires text argument');
   }
+  this.callback({log: 'paragraph: ' + text});
   var node = new Spec.Node({type: 'p'});
   node.text = text;
   this.nodes.push(node);
@@ -107,6 +131,7 @@ Spec.prototype.example = function (text, results, callback) {
   if (typeof text !== 'string' || text === '') {
     throw new Error('Spec.example requires text argument');
   }
+  this.callback({log: 'example: ' + text});
   if (typeof callback !== 'function') {
     throw new Error('Spec.example 3rd arg is function code or undefined');
   }
@@ -124,7 +149,8 @@ Spec.prototype.show = function () {
 /**
  *
  **/
-Spec.prototype.asyncResponse = function () {
+Spec.prototype.asyncResults = function (arg) {
+  return {async: true, expectedValue: arg};
 };
 
 /**---------------------------------------------------------------------------------------------------------------------

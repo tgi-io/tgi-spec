@@ -5,13 +5,13 @@
 var spec = new Spec();
 testSpec(spec);
 spec.runTests(function (msg) {
-/**
- * msg callback events msg.error, msg.log, msg.done
- */
+  /**
+   * msg callback events msg.error, msg.log, msg.done
+   */
   if (msg.error) {
     logError(msg.error);
   } else if (msg.done) {
-    if (msg.testsFailed)
+    if (msg.testsFailed || msg.testsPending)
       logError(msg.testsCreated + ' Tests attempted with ' + msg.testsFailed + ' errors');
     else
       logSuccess(msg.testsCreated + ' Tests completed with no errors');
@@ -59,5 +59,4 @@ spec.runTests(function (msg) {
     p.appendChild(document.createTextNode(txt));
     document.body.appendChild(p);
   }
-
 });
