@@ -1,13 +1,11 @@
-# Heading
-## Heading
+# Markdown
+## Github flavorder that is
 ### Heading
 #### Heading
-
-What
-Is
-Up?
-<h3>wtf</h3>
-
+This is the deal.  This is github flavored markdown.  You can read about it here: https://github.com/github/markup
+<blockquote>
+<strong>FOR EXAMPLE CHECK THIS CODE OUT</strong>
+</blockquote>
 ```javascript
 /**---------------------------------------------------------------------------------------------------------------------
  * tgi-spec/gulpfile.js
