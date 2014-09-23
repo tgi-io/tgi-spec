@@ -45,10 +45,10 @@ gulp.task('build', function (callback) {
 // Default Task
 gulp.task('default', ['build', 'lint']);
 ```
-<strong>
 <pre>
+<h8>
 log: eat
 log: more
 log: chiken
+</h8>
 </pre>
-</strong>
