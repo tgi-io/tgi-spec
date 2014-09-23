@@ -45,8 +45,8 @@ gulp.task('build', function (callback) {
 // Default Task
 gulp.task('default', ['build', 'lint']);
 ```
-<samp>
-log: eat
-log: more
-log: chiken
-</samp>
+<strong>
+log: eat</br>
+log: more</br>
+log: chiken</br>
+</strong>
