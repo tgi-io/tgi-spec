@@ -3,7 +3,7 @@
 ### Heading
 #### Heading
 This is the deal.  This is github flavored markdown.  You can read about it here: https://github.com/github/markup
-<br><strong>FOR EXAMPLE CHECK THIS CODE OUT</strong>
+<h6>FOR EXAMPLE CHECK THIS CODE OUT</h6>
 ```javascript
 /**---------------------------------------------------------------------------------------------------------------------
  * tgi-spec/gulpfile.js
