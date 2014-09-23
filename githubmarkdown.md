@@ -46,9 +46,7 @@ gulp.task('build', function (callback) {
 gulp.task('default', ['build', 'lint']);
 ```
 <pre>
-<h8>
 log: eat
 log: more
 log: chiken
-</h8>
 </pre>
