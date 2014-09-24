@@ -26,4 +26,4 @@ setTimeout(function () {  callback(42);
   callback(42);}, 0);
 }, 0);
 ```
-<blockquote><strong>{"expectedValue":{"async":true,"expectedValue":42},"testThrown":false,"testAsync":true}</strong></blockquote>
+<blockquote>{"expectedValue":{"async":true,"expectedValue":42},"testThrown":false,"testAsync":true}</blockquote>
