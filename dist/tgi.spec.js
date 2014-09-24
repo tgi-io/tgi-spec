@@ -47,6 +47,8 @@ Spec.prototype.githubMarkdown = function () {
   var spec = this;
   var text = '';
   var i;
+  var arrayOfLines;
+  var prettyCode;
   for (i = 0; i < spec.nodes.length; i++) {
     var node = spec.nodes[i];
     if (i)
@@ -56,15 +58,21 @@ Spec.prototype.githubMarkdown = function () {
         text += '#### ' + node.text;
         break;
       case 'e':
-        text += '<strong>'  + node.text + '</strong>';
+        arrayOfLines = node.test.testFunction.toString().match(/[^\r\n]+/g);
+        prettyCode = '';
+        for (var j = 1; j < arrayOfLines.length - 1; j++) {
+          var line = arrayOfLines[j];
+          prettyCode += line;
+        }
+        text += '<strong>' + node.text + '</strong>';
         text += '\n```javascript\n// ' +
         JSON.stringify(node.test) +
-        '\n' + node.test.testFunction +
+        '\n' + prettyCode +
         '\n```';
         break;
       default:
       case 'p':
-        text += '<p>'  + node.text + '</p>';
+        text += '<p>' + node.text + '</p>';
         break;
     }
   }
