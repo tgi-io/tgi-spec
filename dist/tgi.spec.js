@@ -86,6 +86,11 @@ Spec.prototype.githubMarkdown = function () {
         text += '\n```javascript' +
         '\n' + prettyCode +
         '\n```';
+        //if (true) {
+          text += '\n<blockquote><strong>' +
+          JSON.stringify(node.test) +
+          '</strong></blockquote>';
+        //}
         break;
       default:
       case 'p':
@@ -196,8 +201,8 @@ Spec.prototype.example = function (text, results, testFunction) {
 /**
  *
  **/
-Spec.prototype.show = function () {
-};
+//Spec.prototype.show = function () {
+//};
 /**
  *
  **/
