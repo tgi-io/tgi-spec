@@ -18,11 +18,11 @@ Spec.prototype.test = function (testSource, testName, testScript) {
   this.scripts.push({testSource: testSource, testName: testName, testScript: testScript});
 };
 Spec.prototype.runTests = function (callback) {
-  this.callback = callback;
+  this.testFunction = callback;
   // Load the scripts
   for (var i = 0; i < this.scripts.length; i++) {
     var script = this.scripts[i];
-    this.callback({log: 'loading test script: ' + script.testName});
+    this.testFunction({log: 'loading test script: ' + script.testName});
     script.testScript(callback);
   }
   this.completionCheck();
@@ -30,7 +30,7 @@ Spec.prototype.runTests = function (callback) {
 Spec.prototype.completionCheck = function (force) {
   var spec = this;
   if (!spec.testsPending || force) {
-    spec.callback({
+    spec.testFunction({
       done: true,
       testsCreated: spec.testsCreated,
       testsPending: spec.testsPending,
@@ -51,21 +51,22 @@ Spec.prototype.githubMarkdown = function () {
     var node = spec.nodes[i];
     if (i)
       text += '\n';
-
     switch (node.type) {
       case 'h':
         text += '#### ' + node.text;
         break;
+      case 'e':
+        text += '<strong>'  + node.text + '</strong>';
+        text += '\n```javascript\n// ' +
+        JSON.stringify(node.test) +
+        '\n' + node.test.testFunction +
+        '\n```';
+        break;
+      default:
       case 'p':
         text += '<p>'  + node.text + '</p>';
         break;
-      case 'e':
-        text += '<strong>'  + node.text + '</strong>';
-        text += '\n```javascript\n// ' + JSON.stringify(node.test) + '\n```';
-        break;
     }
-
-
   }
   return text;
 };
@@ -85,18 +86,18 @@ Spec.Node = function (args) {
 /**
  * Spec.Test for each example
  */
-Spec.Test = function (spec, expectedValue, callback) {
+Spec.Test = function (spec, expectedValue, testFunction) {
   var test = this;
   var testExpectedValue;
   var testReturnValue;
   spec.testsCreated++;
   spec.testsPending++;
   test.expectedValue = expectedValue;
-  test.callback = callback;
+  test.testFunction = testFunction;
   test.testThrown = false;
   test.testAsync = false;
   try {
-    var returnValue = test.callback(function (callbackReturns) {
+    var returnValue = test.testFunction(function (callbackReturns) {
       spec.testsPending--;
       if (typeof expectedValue !== 'undefined' && expectedValue.async) {
         console.log('shizzle = ' + JSON.stringify(callbackReturns));
@@ -130,7 +131,7 @@ Spec.prototype.heading = function (text, func) {
   if (typeof text !== 'string' || text === '') {
     throw new Error('Spec.heading requires text argument');
   }
-  this.callback({log: 'heading: ' + text});
+  this.testFunction({log: 'heading: ' + text});
   var node = new Spec.Node({type: 'h'});
   node.text = text;
   this.nodes.push(node);
@@ -144,7 +145,7 @@ Spec.prototype.paragraph = function (text) {
   if (typeof text !== 'string' || text === '') {
     throw new Error('Spec.paragraph requires text argument');
   }
-  this.callback({log: 'paragraph: ' + text});
+  this.testFunction({log: 'paragraph: ' + text});
   var node = new Spec.Node({type: 'p'});
   node.text = text;
   this.nodes.push(node);
@@ -153,17 +154,17 @@ Spec.prototype.paragraph = function (text) {
 /**
  * Create a example node
  **/
-Spec.prototype.example = function (text, results, callback) {
+Spec.prototype.example = function (text, results, testFunction) {
   if (typeof text !== 'string' || text === '') {
     throw new Error('Spec.example requires text argument');
   }
-  this.callback({log: 'example: ' + text});
-  if (typeof callback !== 'function') {
+  this.testFunction({log: 'example: ' + text});
+  if (typeof testFunction !== 'function') {
     throw new Error('Spec.example 3rd arg is function code or undefined');
   }
   var node = new Spec.Node({type: 'e'});
   node.text = text;
-  node.test = new Spec.Test(this, results, callback);
+  node.test = new Spec.Test(this, results, testFunction);
   this.nodes.push(node);
   return node;
 };
