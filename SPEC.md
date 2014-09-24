@@ -15,7 +15,7 @@ return true;
 return Error('wrong');
 ```
 <blockquote><strong>{"expectedValue":{},"testThrown":false}</strong></blockquote>
-<strong>errors can be thrown</strong>
+errors can be thrown
 ```javascript
 throw Error('wrong');
 ```
