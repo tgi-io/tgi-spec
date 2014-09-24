@@ -1,5 +1,8 @@
-#### Spec
-<p>We are spec!!!</p>
+#### TGI SPEC
+<p>Javascript test and spec documentation framework.</p>
+#### METHODS
+#### example(text, results, testFunction)
+<p>The example function provides a test description, expected outcome and funtion to invoke for test.</p>
 <strong>code with no errors</strong>
 ```javascript
 // Hello World
