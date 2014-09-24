@@ -18,6 +18,7 @@ throw Error('wrong');
 ```
 <strong>expectedValue can be asynchronous</strong>
 ```javascript
-//callback(42);
-callback(42);
+setTimeout(function () {  callback(42);
+  callback(42);}, 0);
+}, 0);
 ```
