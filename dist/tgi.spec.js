@@ -82,7 +82,7 @@ Spec.prototype.githubMarkdown = function () {
             prettyCode += line2 + '\n';
           prettyCode += line2;
         }
-        text += '<strong>' + node.text + '</strong>';
+        text += '<strong>ex: ' + node.text + '</strong>';
         text += '\n```javascript' +
         '\n' + prettyCode +
         '\n```';
