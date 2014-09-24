@@ -3,9 +3,7 @@
 ### Heading
 #### Heading
 This is the deal.  This is github flavored markdown.  You can read about it here: https://github.com/github/markup
-<blockquote>
-<strong>FOR EXAMPLE CHECK THIS CODE OUT</strong>
-</blockquote>
+<h6>FOR EXAMPLE CHECK THIS CODE OUT</h6>
 ```javascript
 /**---------------------------------------------------------------------------------------------------------------------
  * tgi-spec/gulpfile.js
@@ -45,3 +43,10 @@ gulp.task('build', function (callback) {
 // Default Task
 gulp.task('default', ['build', 'lint']);
 ```
+<blockquote>
+<strong>
+log: eat<br>
+log: more<br>
+log: chiken<br>
+</strong>
+</blockquote>
