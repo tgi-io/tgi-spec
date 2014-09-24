@@ -4,6 +4,7 @@
 var Spec = require('../dist/tgi.spec');
 var testSpec = require('../dist/tgi.spec-test');
 var spec = new Spec();
+var fs = require('fs');
 
 testSpec(spec);
 spec.runTests(function (msg) {
@@ -15,7 +16,11 @@ spec.runTests(function (msg) {
     console.log('testsCreated = ' + msg.testsCreated);
     console.log('testsPending = ' + msg.testsPending);
     console.log('testsFailed = ' + msg.testsFailed);
-    if (msg.testsFailed || msg.testsPending) process.exit(1);
+    if (msg.testsFailed || msg.testsPending) {
+      process.exit(1);
+    } else {
+      fs.writeFileSync('SPEC.md', spec.githubMarkdown(), 'utf8');
+    }
   } else if (msg.log) {
     console.log(msg.log);
   }

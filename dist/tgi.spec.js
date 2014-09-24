@@ -29,19 +29,45 @@ Spec.prototype.runTests = function (callback) {
 };
 Spec.prototype.completionCheck = function (force) {
   var spec = this;
-  if (!this.testsPending || force) {
-    this.callback({
+  if (!spec.testsPending || force) {
+    spec.callback({
       done: true,
-      testsCreated: this.testsCreated,
-      testsPending: this.testsPending,
-      testsFailed: this.testsFailed
+      testsCreated: spec.testsCreated,
+      testsPending: spec.testsPending,
+      testsFailed: spec.testsFailed
     });
   } else {
     // Give time for async to finish
-    this.watchdog = this.watchdog || setTimeout(function () {
+    spec.watchdog = spec.watchdog || setTimeout(function () {
       spec.completionCheck(true); // force completion
     }, 500);
   }
+};
+Spec.prototype.githubMarkdown = function () {
+  var spec = this;
+  var text = '';
+  var i;
+  for (i = 0; i < spec.nodes.length; i++) {
+    var node = spec.nodes[i];
+    if (i)
+      text += '\n';
+
+    switch (node.type) {
+      case 'h':
+        text += '#### ' + node.text;
+        break;
+      case 'p':
+        text += '<p>'  + node.text + '</p>';
+        break;
+      case 'e':
+        text += '<strong>'  + node.text + '</strong>';
+        text += '```javascript\n// ' + JSON.stringify(node.test) + '\n```';
+        break;
+    }
+
+
+  }
+  return text;
 };
 /**
  * Spec.Node object for each piece of spec types as follows:
