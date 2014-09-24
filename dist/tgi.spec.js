@@ -61,7 +61,7 @@ Spec.prototype.githubMarkdown = function () {
         break;
       case 'e':
         text += '<strong>'  + node.text + '</strong>';
-        text += '```javascript\n// ' + JSON.stringify(node.test) + '\n```';
+        text += '\n```javascript\n// ' + JSON.stringify(node.test) + '\n```';
         break;
     }
 
