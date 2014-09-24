@@ -87,9 +87,9 @@ Spec.prototype.githubMarkdown = function () {
         '\n' + prettyCode +
         '\n```';
         //if (true) {
-          text += '\n<blockquote><strong>' +
+          text += '\n<blockquote>' +
           JSON.stringify(node.test) +
-          '</strong></blockquote>';
+          '</blockquote>';
         //}
         break;
       default:
