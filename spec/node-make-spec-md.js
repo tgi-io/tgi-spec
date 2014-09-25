@@ -22,6 +22,6 @@ spec.runTests(function (msg) {
       fs.writeFileSync('spec/README.md', spec.githubMarkdown(), 'utf8');
     }
   } else if (msg.log) {
-    console.log(msg.log);
+    //console.log(msg.log);
   }
 });

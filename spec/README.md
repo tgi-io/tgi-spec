@@ -28,8 +28,8 @@ throw Error('wrong');
 </blockquote>
 &nbsp;<b><i>EXAMPLE expected results can be asynchronous:</i></b>
 ```javascript
-setTimeout(function () {  callback(42);
-  callback(42);}, 0);
+setTimeout(function () {
+  callback(42);
 }, 0);
 ```
 <blockquote>returns <strong>42</strong> as expected

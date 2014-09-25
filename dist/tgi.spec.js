@@ -56,7 +56,7 @@ Spec.prototype.githubMarkdown = function () {
         text += '#### ' + node.text;
         break;
       case 'e':
-        text += getCodeChunk();
+        text += codeBlock();
         break;
       default:
       case 'p':
@@ -66,13 +66,18 @@ Spec.prototype.githubMarkdown = function () {
   }
   return text;
 
-  function getCodeChunk() {
+  /**
+   * take test callback and format for code display
+   */
+  function codeBlock() {
     var i, j, k;
     var arrayOfLines;
     var prettyCode;
     var leadingSpaces = 0;
     var line, line2;
-    var text = '';
+    var codeText = '';
+    var resultsText = '';
+    var expectedValue;
     arrayOfLines = node.test.testFunction.toString().match(/[^\r\n]+/g);
     prettyCode = '';
     for (j = 1; j < arrayOfLines.length - 1; j++) {
@@ -89,39 +94,30 @@ Spec.prototype.githubMarkdown = function () {
       line2 = '';
       for (; k < line.length; k++) {
         line2 += line[k];
-        // eat spaces
       }
       if (prettyCode.length)
-        prettyCode += line2 + '\n';
-      prettyCode += line2;
+        prettyCode += '\n' + line2;
+      else
+        prettyCode += line2;
     }
-    text += '&nbsp;<b><i>EXAMPLE ' + node.text + ':</i></b>';
-    text += '\n```javascript' +
-    '\n' + prettyCode +
-    '\n```';
-
-    var expectedValue;
+    codeText += '&nbsp;<b><i>EXAMPLE ' + node.text + ':</i></b>';
+    codeText += '\n```javascript\n' + prettyCode + '\n```';
     expectedValue = node.test.expectedValue;
     if (typeof node.test.expectedValue === 'object' && node.test.expectedValue.async)
       expectedValue = node.test.expectedValue.expectedValue;
-
-    var shizzle = '';
     if (node.test.testThrown) {
       if (expectedValue)
-        shizzle = '<strong>' + expectedValue + '</strong> thrown as expected\n';
+        resultsText = '<strong>' + expectedValue + '</strong> thrown as expected\n';
       else
-        shizzle = 'error thrown as expected\n';
+        resultsText = 'error thrown as expected\n';
     } else {
       if (expectedValue)
-        shizzle = 'returns <strong>' + expectedValue + '</strong> as expected\n';
+        resultsText = 'returns <strong>' + expectedValue + '</strong> as expected\n';
     }
-
-    text += '\n<blockquote>' +
-    shizzle +
+    codeText += '\n<blockquote>' +
+    resultsText +
     '</blockquote>';
-
-
-    return text;
+    return codeText;
   }
 
 
@@ -156,8 +152,6 @@ Spec.Test = function (spec, expectedValue, testFunction) {
     var returnValue = test.testFunction(function (callbackReturns) {
       spec.testsPending--;
       if (typeof expectedValue !== 'undefined' && expectedValue.async) {
-        console.log('shizzle = ' + JSON.stringify(callbackReturns));
-        console.log('test.expectedValue.expectedValue = ' + JSON.stringify(test.expectedValue.expectedValue));
         if (test.expectedValue.expectedValue !== callbackReturns) {
           spec.testsFailed++;
         }
