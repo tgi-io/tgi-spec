@@ -12,19 +12,19 @@
 ```javascript
 return true;
 ```
-<blockquote>{"expectedValue":true,"testThrown":false}<br>yeilds expected result: <strong>true</strong>
+<blockquote>{"expectedValue":true,"testThrown":false}<br>returns <strong>true</strong> as expected
 </blockquote>
 &nbsp;<b><i>EXAMPLE errors can be returned:</i></b>
 ```javascript
 return Error('wrong');
 ```
-<blockquote>{"expectedValue":{},"testThrown":false}<br>yeilds expected result: <strong>Error: wrong</strong>
+<blockquote>{"expectedValue":{},"testThrown":false}<br>returns <strong>Error: wrong</strong> as expected
 </blockquote>
 &nbsp;<b><i>EXAMPLE errors can be thrown:</i></b>
 ```javascript
 throw Error('wrong');
 ```
-<blockquote>{"expectedValue":{},"testThrown":true,"testAsync":false}<br>yeilds expected result: <strong>Error: wrong</strong>
+<blockquote>{"expectedValue":{},"testThrown":true,"testAsync":false}<br>error <strong>Error: wrong</strong> thrown as expected
 </blockquote>
 &nbsp;<b><i>EXAMPLE expectedValue can be asynchronous:</i></b>
 ```javascript
@@ -32,5 +32,5 @@ setTimeout(function () {  callback(42);
   callback(42);}, 0);
 }, 0);
 ```
-<blockquote>{"expectedValue":{"async":true,"expectedValue":42},"testThrown":false,"testAsync":true}<br>yeilds expected result: <strong>[object Object]</strong>
+<blockquote>{"expectedValue":{"async":true,"expectedValue":42},"testThrown":false,"testAsync":true}<br>returns <strong>[object Object]</strong> as expected
 </blockquote>

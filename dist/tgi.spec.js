@@ -100,10 +100,16 @@ Spec.prototype.githubMarkdown = function () {
     '\n' + prettyCode +
     '\n```';
 
-
     var shizzle = '';
-    if (node.test.expectedValue)
-      shizzle = '<br>yeilds expected result: <strong>' + node.test.expectedValue + '</strong>\n';
+    if (node.test.testThrown) {
+      if (node.test.expectedValue)
+        shizzle = '<br>error <strong>' + node.test.expectedValue + '</strong> thrown as expected\n';
+      else
+        shizzle = '<br>error thrown as expected\n';
+    } else {
+      if (node.test.expectedValue)
+        shizzle = '<br>returns <strong>' + node.test.expectedValue + '</strong> as expected\n';
+    }
 
     text += '\n<blockquote>' +
     JSON.stringify(node.test) +
