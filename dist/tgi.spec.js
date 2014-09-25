@@ -50,7 +50,7 @@ Spec.prototype.githubMarkdown = function () {
   var arrayOfLines;
   var prettyCode;
   var leadingSpaces = 0;
-  var line,line2;
+  var line, line2;
   for (i = 0; i < spec.nodes.length; i++) {
     var node = spec.nodes[i];
     if (i)
@@ -60,37 +60,7 @@ Spec.prototype.githubMarkdown = function () {
         text += '#### ' + node.text;
         break;
       case 'e':
-        arrayOfLines = node.test.testFunction.toString().match(/[^\r\n]+/g);
-        prettyCode = '';
-        for (j = 1; j < arrayOfLines.length - 1; j++) {
-          line = arrayOfLines[j];
-          if (j == 1) {
-            leadingSpaces=0;
-            for (k = 0; k < line.length && line[k] == ' '; k++) {
-              leadingSpaces++;
-            }
-          }
-          for (k = 0; k < line.length && k < leadingSpaces && line[k] == ' '; k++) {
-            // eat spaces
-          }
-          line2 = '';
-          for (; k < line.length; k++) {
-            line2 += line[k];
-            // eat spaces
-          }
-          if (prettyCode.length)
-            prettyCode += line2 + '\n';
-          prettyCode += line2;
-        }
-        text += '<strong><i>EXAMPLE </i> ' + node.text + ':</strong>';
-        text += '\n```javascript' +
-        '\n' + prettyCode +
-        '\n```';
-        //if (true) {
-          text += '\n<blockquote>' +
-          JSON.stringify(node.test) +
-          '</blockquote>';
-        //}
+        text += getCodeChunk();
         break;
       default:
       case 'p':
@@ -99,6 +69,46 @@ Spec.prototype.githubMarkdown = function () {
     }
   }
   return text;
+
+  function getCodeChunk() {
+    var text = '';
+
+    arrayOfLines = node.test.testFunction.toString().match(/[^\r\n]+/g);
+    prettyCode = '';
+    for (j = 1; j < arrayOfLines.length - 1; j++) {
+      line = arrayOfLines[j];
+      if (j == 1) {
+        leadingSpaces = 0;
+        for (k = 0; k < line.length && line[k] == ' '; k++) {
+          leadingSpaces++;
+        }
+      }
+      for (k = 0; k < line.length && k < leadingSpaces && line[k] == ' '; k++) {
+        // eat spaces
+      }
+      line2 = '';
+      for (; k < line.length; k++) {
+        line2 += line[k];
+        // eat spaces
+      }
+      if (prettyCode.length)
+        prettyCode += line2 + '\n';
+      prettyCode += line2;
+    }
+    text += '<em>EXAMPLE ' + node.text + ':</em>';
+    text += '\n```javascript' +
+    '\n' + prettyCode +
+    '\n```';
+    //if (true) {
+    text += '\n<blockquote>' +
+    JSON.stringify(node.test) +
+    '</blockquote>';
+    //}
+
+    return text;
+  }
+
+
 };
 /**
  * Spec.Node object for each piece of spec types as follows:
