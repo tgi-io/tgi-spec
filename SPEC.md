@@ -3,7 +3,7 @@
 #### METHODS
 #### example(text, results, testFunction)
 <p>The example function provides a test description, expected outcome and funtion to invoke for test.</p>
-<strong><i> EXAMPLE </i> code with no errors:</strong>
+<strong><i>EXAMPLE code with no errors:</i></strong>
 ```javascript
 // Hello World
 ```
