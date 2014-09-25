@@ -24,7 +24,7 @@ return Error('wrong');
 ```javascript
 throw Error('wrong');
 ```
-<blockquote>{"expectedValue":{},"testThrown":true,"testAsync":false}<br>error <strong>Error: wrong</strong> thrown as expected
+<blockquote>{"expectedValue":{},"testThrown":true,"testAsync":false}<br><strong>Error: wrong</strong> thrown as expected
 </blockquote>
 &nbsp;<b><i>EXAMPLE expectedValue can be asynchronous:</i></b>
 ```javascript
@@ -32,5 +32,5 @@ setTimeout(function () {  callback(42);
   callback(42);}, 0);
 }, 0);
 ```
-<blockquote>{"expectedValue":{"async":true,"expectedValue":42},"testThrown":false,"testAsync":true}<br>returns <strong>[object Object]</strong> as expected
+<blockquote>{"expectedValue":{"async":true,"expectedValue":42},"testThrown":false,"testAsync":true}<br>returns <strong>42</strong> as expected
 </blockquote>

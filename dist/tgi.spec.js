@@ -100,15 +100,20 @@ Spec.prototype.githubMarkdown = function () {
     '\n' + prettyCode +
     '\n```';
 
+    var expectedValue;
+    expectedValue = node.test.expectedValue;
+    if (typeof node.test.expectedValue === 'object' && node.test.expectedValue.async)
+      expectedValue = node.test.expectedValue.expectedValue;
+
     var shizzle = '';
     if (node.test.testThrown) {
-      if (node.test.expectedValue)
-        shizzle = '<br>error <strong>' + node.test.expectedValue + '</strong> thrown as expected\n';
+      if (expectedValue)
+        shizzle = '<br><strong>' + expectedValue + '</strong> thrown as expected\n';
       else
         shizzle = '<br>error thrown as expected\n';
     } else {
-      if (node.test.expectedValue)
-        shizzle = '<br>returns <strong>' + node.test.expectedValue + '</strong> as expected\n';
+      if (expectedValue)
+        shizzle = '<br>returns <strong>' + expectedValue + '</strong> as expected\n';
     }
 
     text += '\n<blockquote>' +
