@@ -39,5 +39,5 @@ setTimeout(function () {
 this.shouldBeTrue(1 === 2);
 ```
 <blockquote>ERROR got  <strong>undefined</strong> expected <strong>undefined</strong>
-Assertion(s) failed
+<br>Assertion(s) failed
 </blockquote>
