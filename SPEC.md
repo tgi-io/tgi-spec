@@ -12,19 +12,19 @@
 ```javascript
 return true;
 ```
-<blockquote><br>returns <strong>true</strong> as expected
+<blockquote>returns <strong>true</strong> as expected
 </blockquote>
 &nbsp;<b><i>EXAMPLE errors can be returned:</i></b>
 ```javascript
 return Error('wrong');
 ```
-<blockquote><br>returns <strong>Error: wrong</strong> as expected
+<blockquote>returns <strong>Error: wrong</strong> as expected
 </blockquote>
 &nbsp;<b><i>EXAMPLE errors can be thrown:</i></b>
 ```javascript
 throw Error('wrong');
 ```
-<blockquote><br><strong>Error: wrong</strong> thrown as expected
+<blockquote><strong>Error: wrong</strong> thrown as expected
 </blockquote>
 &nbsp;<b><i>EXAMPLE expectedValue can be asynchronous:</i></b>
 ```javascript
@@ -32,5 +32,5 @@ setTimeout(function () {  callback(42);
   callback(42);}, 0);
 }, 0);
 ```
-<blockquote><br>returns <strong>42</strong> as expected
+<blockquote>returns <strong>42</strong> as expected
 </blockquote>
