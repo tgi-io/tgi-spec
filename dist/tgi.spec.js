@@ -99,11 +99,16 @@ Spec.prototype.githubMarkdown = function () {
     text += '\n```javascript' +
     '\n' + prettyCode +
     '\n```';
-    //if (true) {
+
+
+    var shizzle = 'my znizzle\n';
+
+
     text += '\n<blockquote>' +
     JSON.stringify(node.test) +
+    shizzle +
     '</blockquote>';
-    //}
+
 
     return text;
   }

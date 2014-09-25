@@ -7,25 +7,25 @@
 ```javascript
 // Hello World
 ```
-<blockquote>{"testThrown":false,"testAsync":false}my nizzle
+<blockquote>{"testThrown":false,"testAsync":false}my znizzle
 </blockquote>
 &nbsp;<b><i>EXAMPLE code with expected return value:</i></b>
 ```javascript
 return true;
 ```
-<blockquote>{"expectedValue":true,"testThrown":false}my nizzle
+<blockquote>{"expectedValue":true,"testThrown":false}my znizzle
 </blockquote>
 &nbsp;<b><i>EXAMPLE errors can be returned:</i></b>
 ```javascript
 return Error('wrong');
 ```
-<blockquote>{"expectedValue":{},"testThrown":false}my nizzle
+<blockquote>{"expectedValue":{},"testThrown":false}my znizzle
 </blockquote>
 &nbsp;<b><i>EXAMPLE errors can be thrown:</i></b>
 ```javascript
 throw Error('wrong');
 ```
-<blockquote>{"expectedValue":{},"testThrown":true,"testAsync":false}my nizzle
+<blockquote>{"expectedValue":{},"testThrown":true,"testAsync":false}my znizzle
 </blockquote>
 &nbsp;<b><i>EXAMPLE expectedValue can be asynchronous:</i></b>
 ```javascript
@@ -33,5 +33,5 @@ setTimeout(function () {  callback(42);
   callback(42);}, 0);
 }, 0);
 ```
-<blockquote>{"expectedValue":{"async":true,"expectedValue":42},"testThrown":false,"testAsync":true}my nizzle
+<blockquote>{"expectedValue":{"async":true,"expectedValue":42},"testThrown":false,"testAsync":true}my znizzle
 </blockquote>
