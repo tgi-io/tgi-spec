@@ -117,7 +117,7 @@ Spec.prototype.githubMarkdown = function () {
     }
 
     text += '\n<blockquote>' +
-    JSON.stringify(node.test) +
+    //JSON.stringify(node.test) +
     shizzle +
     '</blockquote>';
 
