@@ -28,6 +28,9 @@ throw Error('wrong');
 setTimeout(function () {  callback(42);
   callback(42);}, 0);
 }, 0);
+/** Returns shit
+and
+you can count on that */
 ```
 <blockquote>{"expectedValue":{"async":true,"expectedValue":42},"testThrown":false,"testAsync":true}</blockquote>
 
