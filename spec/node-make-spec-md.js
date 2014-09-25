@@ -19,7 +19,7 @@ spec.runTests(function (msg) {
     if (msg.testsFailed || msg.testsPending) {
       process.exit(1);
     } else {
-      fs.writeFileSync('SPEC.md', spec.githubMarkdown(), 'utf8');
+      fs.writeFileSync('spec/README.md', spec.githubMarkdown(), 'utf8');
     }
   } else if (msg.log) {
     console.log(msg.log);

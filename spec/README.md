@@ -26,7 +26,7 @@ throw Error('wrong');
 ```
 <blockquote><strong>Error: wrong</strong> thrown as expected
 </blockquote>
-&nbsp;<b><i>EXAMPLE expectedValue can be asynchronous:</i></b>
+&nbsp;<b><i>EXAMPLE expected results can be asynchronous:</i></b>
 ```javascript
 setTimeout(function () {  callback(42);
   callback(42);}, 0);
