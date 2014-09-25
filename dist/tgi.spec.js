@@ -101,7 +101,7 @@ Spec.prototype.githubMarkdown = function () {
     '\n```';
 
 
-    var shizzle = 'my znizzle\n';
+    var shizzle = '\nmy zxnizzle\n';
 
 
     text += '\n<blockquote>' +
