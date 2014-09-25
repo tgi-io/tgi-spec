@@ -30,6 +30,7 @@ Spec.prototype.runTests = function (callback) {
 Spec.prototype.completionCheck = function (force) {
   var spec = this;
   if (!spec.testsPending || force) {
+    clearTimeout(spec.watchdog);
     spec.testFunction({
       done: true,
       testsCreated: spec.testsCreated,
@@ -106,13 +107,21 @@ Spec.prototype.githubMarkdown = function () {
     if (typeof node.test.expectedValue === 'object' && node.test.expectedValue.async)
       expectedValue = node.test.expectedValue.expectedValue;
     if (node.test.testThrown) {
-      if (expectedValue)
-        resultsText = '<strong>' + expectedValue + '</strong> thrown as expected\n';
-      else
-        resultsText = 'error thrown as expected\n';
+      if (node.test.testFailed) {
+        resultsText = 'error thrown: ' + node.test.errorThrown + '\n';
+      } else {
+        if (expectedValue)
+          resultsText = '<strong>' + expectedValue + '</strong> thrown as expected\n';
+        else
+          resultsText = 'error thrown as expected\n';
+      }
     } else {
-      if (expectedValue)
-        resultsText = 'returns <strong>' + expectedValue + '</strong> as expected\n';
+      if (node.test.testFailed) {
+        resultsText = 'ERROR got  <strong>' + test.returnValue + '</strong> expected <strong>' + expectedValue + '</strong>\n';
+      } else {
+        if (expectedValue)
+          resultsText = 'returns <strong>' + expectedValue + '</strong> as expected\n';
+      }
     }
     codeText += '\n<blockquote>' +
     resultsText +
@@ -163,12 +172,16 @@ Spec.Test = function (spec, expectedValue, testFunction) {
       testReturnValue = returnValue instanceof Error ? returnValue.toString() : returnValue;
       if (!test.testAsync && testExpectedValue !== testReturnValue) {
         spec.testsFailed++;
+        test.testFailed = true;
+        test.returnValue = testReturnValue;
       }
     }
   } catch (e) {
     test.testThrown = true;
+    test.errorThrown = e;
     if (typeof expectedValue === 'undefined' || !(expectedValue instanceof Error) || e.toString() !== expectedValue.toString()) {
       spec.testsFailed++;
+      test.testFailed = true;
     }
   }
   if (!test.testAsync)

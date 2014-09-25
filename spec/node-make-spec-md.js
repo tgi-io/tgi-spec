@@ -17,6 +17,7 @@ spec.runTests(function (msg) {
     console.log('testsPending = ' + msg.testsPending);
     console.log('testsFailed = ' + msg.testsFailed);
     if (msg.testsFailed || msg.testsPending) {
+      fs.writeFileSync('spec/README.md', spec.githubMarkdown(), 'utf8');
       process.exit(1);
     } else {
       fs.writeFileSync('spec/README.md', spec.githubMarkdown(), 'utf8');
