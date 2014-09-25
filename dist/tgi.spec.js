@@ -117,7 +117,8 @@ Spec.prototype.githubMarkdown = function () {
       }
     } else {
       if (node.test.testFailed) {
-        resultsText = 'ERROR got  <strong>' + node.test.returnValue + '</strong> expected <strong>' + expectedValue + '</strong>\n';
+        if (node.test.returnValue !== expectedValue)
+          resultsText = 'ERROR got  <strong>' + node.test.returnValue + '</strong> expected <strong>' + expectedValue + '</strong>\n';
       } else {
         if (expectedValue)
           resultsText = 'returns <strong>' + expectedValue + '</strong> as expected\n';
