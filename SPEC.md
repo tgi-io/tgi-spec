@@ -32,7 +32,6 @@ setTimeout(function () {  callback(42);
 <blockquote>{"expectedValue":{"async":true,"expectedValue":42},"testThrown":false,"testAsync":true}</blockquote>
 
 |sup
----
 |my
 |man
 
