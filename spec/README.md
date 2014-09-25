@@ -36,7 +36,8 @@ setTimeout(function () {
 </blockquote>
 &nbsp;<b><i>EXAMPLE can contain one or more assertions:</i></b>
 ```javascript
-spec.assert(1 === 2);
+this.shouldBeTrue(1 === 2);
 ```
-<blockquote>error thrown: TypeError: Object [object Object] has no method 'assert'
+<blockquote>ERROR got  <strong>undefined</strong> expected <strong>undefined</strong>
+Assertion(s) failed
 </blockquote>
