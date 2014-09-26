@@ -101,7 +101,7 @@ Spec.prototype.githubMarkdown = function () {
       else
         prettyCode += line2;
     }
-    codeText += '&nbsp;<b><i>Example ' + node.text + ':</i></b>';
+    codeText += '&nbsp;<b><i>' + node.text + ':</i></b>';
     codeText += '\n```javascript\n' + prettyCode + '\n```';
     expectedValue = node.test.expectedValue;
     if (typeof node.test.expectedValue === 'object' && node.test.expectedValue.async)
