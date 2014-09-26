@@ -101,7 +101,7 @@ Spec.prototype.githubMarkdown = function () {
       else
         prettyCode += line2;
     }
-    codeText += '&nbsp;<b><i>EXAMPLE ' + node.text + ':</i></b>';
+    codeText += '&nbsp;<b><i>Example ' + node.text + ':</i></b>';
     codeText += '\n```javascript\n' + prettyCode + '\n```';
     expectedValue = node.test.expectedValue;
     if (typeof node.test.expectedValue === 'object' && node.test.expectedValue.async)
@@ -215,6 +215,12 @@ Spec.Test.prototype.shouldBeTrue = function (expression) {
   if (expression !== true)
     this.assertionsFailed++;
 };
+Spec.Test.prototype.shouldBeFalse = function (expression) {
+  this.assertionsMade++;
+  if (expression !== false)
+    this.assertionsFailed++;
+};
+
 /**
  * Create a heading node
  **/

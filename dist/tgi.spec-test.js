@@ -35,7 +35,11 @@ spec.test('lib/tgi-spec', 'Spec Constructor Function', function (callback) {
           }, 0);
         });
         test.example('can contain one or more assertions', undefined, function () {
-          this.shouldBeTrue(1 === 2);
+          this.shouldBeTrue(2 === 2);
+          this.shouldBeFalse(2.2 - 1.2 === 1.0); // floating point humor - you had to be there
+          //this.shouldThrowError(function () {
+          //  return 1 / 0;
+          //});
         });
       });
     });
