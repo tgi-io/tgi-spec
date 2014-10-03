@@ -37,9 +37,12 @@ setTimeout(function () {
 &nbsp;<b><i>Can contain one or more assertions:</i></b>
 ```javascript
 this.shouldBeTrue(2 === 2);
-this.shouldBeFalse(2.2 - 1.2 === 1.0); // floating point humor - you had to be there
-//this.shouldThrowError(function () {
-//  return 1 / 0;
-//});
+this.shouldBeFalse(0.1 + 0.2 === 0.3);
+this.shouldThrowError('*', function () { // Any error
+  throw Error();
+});
+this.shouldThrowError(Error('fubar'), function () {
+  throw Error('fubar');
+});
 ```
 <blockquote></blockquote>
