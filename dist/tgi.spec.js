@@ -18,11 +18,11 @@ Spec.prototype.test = function (testSource, testName, testScript) {
   this.scripts.push({testSource: testSource, testName: testName, testScript: testScript});
 };
 Spec.prototype.runTests = function (callback) {
-  this.testFunction = callback;
+  this.testCallback = callback;
   // Load the scripts
   for (var i = 0; i < this.scripts.length; i++) {
     var script = this.scripts[i];
-    this.testFunction({log: 'loading test script: ' + script.testName});
+    this.testCallback({log: 'loading test script: ' + script.testName});
     script.testScript(callback);
   }
   this.completionCheck();
@@ -31,7 +31,7 @@ Spec.prototype.completionCheck = function (force) {
   var spec = this;
   if (!spec.testsPending || force) {
     clearTimeout(spec.watchdog);
-    spec.testFunction({
+    spec.testCallback({
       done: true,
       testsCreated: spec.testsCreated,
       testsPending: spec.testsPending,
@@ -184,11 +184,11 @@ Spec.Test = function (spec, expectedValue, testFunction) {
         if (testExpectedValue !== testReturnValue) {
           spec.testsFailed++;
           test.testFailed = true;
-          this.testFunction({error: 'return value incorrect: ' + testReturnValue});
+          spec.testCallback({error: 'return value incorrect: ' + testReturnValue});
         } else if (test.assertionsFailed) {
           spec.testsFailed++;
           test.testFailed = true;
-          this.testFunction({error: 'assertions failed: ' + testReturnValue});
+          spec.testCallback({error: 'assertions failed: ' + testReturnValue});
         }
       }
     } else if (test.assertionsFailed) {
@@ -201,7 +201,7 @@ Spec.Test = function (spec, expectedValue, testFunction) {
     if (typeof expectedValue === 'undefined' || !(expectedValue instanceof Error) || e.toString() !== expectedValue.toString()) {
       spec.testsFailed++;
       test.testFailed = true;
-      this.testFunction({error: 'error thrown: ' + e});
+      spec.testCallback({error: 'error thrown: ' + e});
     }
   }
   if (!test.testAsync)
@@ -240,10 +240,11 @@ Spec.Test.prototype.shouldThrowError = function (err, func) {
  * Create a heading node
  **/
 Spec.prototype.heading = function (text, func) {
+  var spec = this;
   if (typeof text !== 'string' || text === '') {
     throw new Error('Spec.heading requires text argument');
   }
-  this.testFunction({log: 'heading: ' + text});
+  spec.testCallback({log: 'heading: ' + text});
   var node = new Spec.Node({type: 'h'});
   node.text = text;
   this.nodes.push(node);
@@ -254,10 +255,11 @@ Spec.prototype.heading = function (text, func) {
  * Create a paragraph node
  **/
 Spec.prototype.paragraph = function (text) {
+  var spec = this;
   if (typeof text !== 'string' || text === '') {
     throw new Error('Spec.paragraph requires text argument');
   }
-  this.testFunction({log: 'paragraph: ' + text});
+  spec.testCallback({log: 'paragraph: ' + text});
   var node = new Spec.Node({type: 'p'});
   node.text = text;
   this.nodes.push(node);
@@ -267,10 +269,11 @@ Spec.prototype.paragraph = function (text) {
  * Create a example node
  **/
 Spec.prototype.example = function (text, results, testFunction) {
+  var spec = this;
   if (typeof text !== 'string' || text === '') {
     throw new Error('Spec.example requires text argument');
   }
-  this.testFunction({log: 'example: ' + text});
+  spec.testCallback({log: 'example: ' + text});
   if (typeof testFunction !== 'function') {
     throw new Error('Spec.example 3rd arg is function code or undefined');
   }
