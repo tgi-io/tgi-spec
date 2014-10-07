@@ -167,12 +167,15 @@ Spec.Test = function (spec, expectedValue, testFunction) {
     var returnValue = test.testFunction(function (callbackReturns) {
       spec.testsPending--;
       if (typeof expectedValue !== 'undefined' && expectedValue.async) {
-        if (test.expectedValue.expectedValue !== callbackReturns || test.assertionsFailed) {
+        if (test.expectedValue.expectedValue != callbackReturns) {
           spec.testsFailed++;
+          test.testFailed = true;
+          spec.testCallback({error: 'callback return value incorrect: "' + callbackReturns + '" expected "' + test.expectedValue.expectedValue + '"'});
         }
       } else if (test.assertionsFailed) {
         spec.testsFailed++;
         test.testFailed = true;
+        spec.testCallback({error: 'assertions failed: ' + testReturnValue});
       }
     });
     if (typeof expectedValue !== 'undefined') {
@@ -194,6 +197,7 @@ Spec.Test = function (spec, expectedValue, testFunction) {
     } else if (test.assertionsFailed) {
       spec.testsFailed++;
       test.testFailed = true;
+      spec.testCallback({error: 'assertions failed: ' + testReturnValue});
     }
   } catch (e) {
     test.testThrown = true;
