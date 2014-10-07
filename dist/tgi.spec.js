@@ -181,7 +181,7 @@ Spec.Test = function (spec, expectedValue, testFunction) {
       testReturnValue = returnValue instanceof Error ? returnValue.toString() : returnValue;
       if (!test.testAsync) {
         test.returnValue = testReturnValue;
-        if (testExpectedValue !== testReturnValue) {
+        if (testExpectedValue != testReturnValue) {
           spec.testsFailed++;
           test.testFailed = true;
           spec.testCallback({error: 'return value incorrect: "' + testReturnValue + '" expected "' + testExpectedValue + '"'});
