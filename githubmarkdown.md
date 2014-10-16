@@ -50,4 +50,4 @@ log: more<br>
 log: chiken<br>
 </strong>
 </blockquote>
-Hey you can go [#heading](heading)
+Hey you can go [#heading]
