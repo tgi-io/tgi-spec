@@ -10,7 +10,6 @@ var testSpec = function(spec) {
  * tgi-spec/lib/tgi-spec.test.js
  */
 spec.test('lib/tgi-spec', 'Spec Constructor Function', function (callback) {
-  callback({log: 'TEST_SPEC.shit tgi-spec/lib/tgi-spec.test.js'});
   spec.heading('TGI SPEC', function () {
     spec.paragraph('Javascript test and spec documentation framework.');
     spec.heading('METHODS', function () {
@@ -49,7 +48,6 @@ spec.test('lib/tgi-spec', 'Spec Constructor Function', function (callback) {
         //spec.example('FAIL', true, function () {
         //  return false;
         //});
-
       });
     });
   });

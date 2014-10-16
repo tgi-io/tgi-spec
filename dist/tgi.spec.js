@@ -8,24 +8,31 @@ var root = this;
  * tgi-spec/lib/tgi-spec.source.js
  **/
 var Spec = function () {
-  this.scripts = []; // array of scripts
-  this.nodes = []; // array of Spec.Node's
-  this.testsCreated = 0;
-  this.testsPending = 0;
-  this.testsFailed = 0;
+  var spec = this;
+  spec.scripts = []; // array of scripts
+  spec.nodes = []; // array of Spec.Node's
+  spec.testsCreated = 0;
+  spec.testsPending = 0;
+  spec.testsFailed = 0;
 };
 Spec.prototype.test = function (testSource, testName, testScript) {
   this.scripts.push({testSource: testSource, testName: testName, testScript: testScript});
 };
 Spec.prototype.runTests = function (callback) {
-  this.testCallback = callback;
+  var spec = this;
+  spec.testCallback = callback;
   // Load the scripts
-  for (var i = 0; i < this.scripts.length; i++) {
-    var script = this.scripts[i];
-    this.testCallback({log: 'loading test script: ' + script.testName});
+  for (var i = 0; i < spec.scripts.length; i++) {
+    var script = spec.scripts[i];
+    spec.testCallback({log: 'test script: ' + script.testName});
+    // create test node
+    var node = new Spec.Node({type: 't'});
+    node.text = script.testName;
+    spec.nodes.push(node);
+    
     script.testScript(callback);
   }
-  this.completionCheck();
+  spec.completionCheck();
 };
 Spec.prototype.completionCheck = function (force) {
   var spec = this;
@@ -53,6 +60,9 @@ Spec.prototype.githubMarkdown = function () {
     if (i)
       text += '\n';
     switch (node.type) {
+      case 't':
+        text += '## ' + node.text;
+        break;
       case 'h':
         text += '#### ' + node.text;
         break;
@@ -144,8 +154,8 @@ Spec.prototype.githubMarkdown = function () {
 Spec.Node = function (args) {
   args = args || {};
   this.type = args.type || null;
-  if (!this.type || ((this.type != 'h') && (this.type != 'p') && (this.type != 'e'))) {
-    throw new Error('Spec.Node type must be h, p or e');
+  if (!this.type || ((this.type != 't') && (this.type != 'h') && (this.type != 'p') && (this.type != 'e'))) {
+    throw new Error('Spec.Node type must be t, h, p or e');
   }
 };
 /**

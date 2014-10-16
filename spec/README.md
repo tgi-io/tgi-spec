@@ -1,3 +1,4 @@
+## Spec Constructor Function
 #### TGI SPEC
 <p>Javascript test and spec documentation framework.</p>
 #### METHODS
@@ -46,5 +47,7 @@ this.shouldThrowError(Error('fubar'), function () {
 });
 ```
 <blockquote></blockquote>
+## Illiad Book 1
 <p>Sing, O goddess, the anger of Achilles son of Peleus, that brought countless ills upon the Achaeans.</p>
+## Illiad Book 2
 <p>Now the other gods and the armed warriors on the plain slept soundly, but Jove was wakeful, for he was thinking how to do honour to Achilles, and destroyed much people at the ships of the Achaeans.</p>
