@@ -2,7 +2,7 @@
 ## Github flavorder that is
 ### Heading
 #### Heading
-This is the deal.  *what* _the_ /fuck/ This is github flavored markdown.  You can read about it here: https://github.com/github/markup
+This is the deal.  *what* ** is upe**? This is github flavored markdown.  You can read about it here: https://github.com/github/markup
 <h6>FOR EXAMPLE CHECK THIS CODE OUT</h6>
 ```javascript
 /**---------------------------------------------------------------------------------------------------------------------
