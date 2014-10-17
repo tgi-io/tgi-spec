@@ -1,4 +1,4 @@
-#[What is the point?](#point-is-thisback)
+#[What is the point?](#point-is-this)
 # Markdown
 ## Github flavorder that is
 ### Heading
@@ -135,5 +135,5 @@ Hey you can go [#heading](#heading)
 <p>I'm sorry but sometimes spam is needed</p>
 <p>I'm sorry but sometimes spam is needed</p>
 <p>I'm sorry but sometimes spam is needed</p>
-#Point Is this<span>[(back)](#what-is-the-point)</span>
+#[Point Is this](#what-is-the-point)
 The point is to test how anchors with with this funky thing called github flavored markdown.
