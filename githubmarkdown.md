@@ -1,5 +1,4 @@
-What is the poing? [#point-is-this](#point-is-this)
- [Anchors like this](#point-is-this)
+[What is the point?](#point-is-this)
 # Markdown
 ## Github flavorder that is
 ### Heading
