@@ -1,4 +1,4 @@
-#[What is the point?](#point-is-this)
+#[What is the point?](#point-is-thisback)
 # Markdown
 ## Github flavorder that is
 ### Heading
