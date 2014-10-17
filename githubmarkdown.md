@@ -43,6 +43,27 @@ Finally, by including colons : within the header row, you can define text to be 
 
 A colon on the left-most side indicates a left-aligned column; a colon on the right-most side indicates a right-aligned column; a colon on both sides indicates a center-aligned column.
 
+Task lists
+
+Lists can be turned into task lists by prefacing list items with [ ] or [x] (incomplete or complete, respectively).
+
+- [x] @mentions, #refs, [links](), **formatting**, and <del>tags</del> are supported
+- [x] list syntax is required (any unordered or ordered list supported)
+- [x] this is a complete item
+- [ ] this is an incomplete item
+Task lists render with checkboxes in all comments and Markdown files. Select or unselect these checkboxes to mark them as complete or incomplete across GitHub.
+
+Task lists can be nested to better structure your tasks:
+
+- [ ] a bigger project
+  - [ ] first subtask #1234
+  - [ ] follow up subtask #4321
+  - [ ] final subtask cc @mention
+- [ ] a separate task
+Task lists can be nested to arbitrary depths, though we recommend nesting at most once or twice; more complicated tasks should be broken out into separate lists.
+
+
+
 <h6>FOR EXAMPLE CHECK THIS CODE OUT</h6>
 ```javascript
 /**---------------------------------------------------------------------------------------------------------------------
