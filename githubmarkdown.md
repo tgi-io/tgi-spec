@@ -76,5 +76,5 @@ Hey you can go [#heading](#heading)
 <p>I'm sorry but sometimes spam is needed</p>
 <p>I'm sorry but sometimes spam is needed</p>
 #Point Is this
-The point is to test how anchors with with this funkyt hink called github flavored markdown.
+The point is to test how anchors with with this funky thing called github flavored markdown.
 
