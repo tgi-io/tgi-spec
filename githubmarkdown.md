@@ -135,5 +135,5 @@ Hey you can go [#heading](#heading)
 <p>I'm sorry but sometimes spam is needed</p>
 <p>I'm sorry but sometimes spam is needed</p>
 <p>I'm sorry but sometimes spam is needed</p>
-#[Point Is this](#what-is-the-point)<[INDEX](#what-is-the-point)> <[PREVIOUS](#what-is-the-point)> <[NEXT](#what-is-the-point)>
+#Point Is this [index](#what-is-the-point)>
 The point is to test how anchors with with this funky thing called github flavored markdown.
