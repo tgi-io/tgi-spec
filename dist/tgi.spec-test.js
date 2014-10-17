@@ -9,6 +9,16 @@ var testSpec = function(spec) {
 /**---------------------------------------------------------------------------------------------------------------------
  * tgi-spec/lib/tgi-spec.test.js
  */
+/**
+ * Doc Intro
+ */
+spec.test('lib/tgi-spec-intro', 'INTRO', function (callback) {
+  spec.paragraph('There be dragons.');
+});
+
+/**
+ * The Spec
+ */
 spec.test('lib/tgi-spec', 'Spec Constructor Function', function (callback) {
   spec.heading('TGI SPEC', function () {
     spec.paragraph('Javascript test and spec documentation framework.');
