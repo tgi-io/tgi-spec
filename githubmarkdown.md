@@ -1,5 +1,5 @@
 #[What is the point?](#-point-is-this)
-# Markdown<pre>pre</pre>
+# Markdown<span>pre</span>
 ## Github flavorder that is
 ### Heading
 #### Heading
