@@ -8,7 +8,7 @@
 - [Illiad Book 2](#) it is what it is
 
 
-## [&#9664;](#prev)&nbsp;[&#8984;](#intro)&nbsp;[&#9654;](#next) &nbsp;Spec Constructor Function
+## [&#9664;](#prev)&nbsp;[&#8984;](#table-of-contents)&nbsp;[&#9654;](#next) &nbsp;Spec Constructor Function
 #### TGI SPEC
 <p>Javascript test and spec documentation framework.</p>
 #### METHODS
@@ -57,7 +57,7 @@ this.shouldThrowError(Error('fubar'), function () {
 });
 ```
 <blockquote></blockquote>
-## [&#9664;](#prev)&nbsp;[&#8984;](#intro)&nbsp;[&#9654;](#next) &nbsp;Illiad Book 1
+## [&#9664;](#prev)&nbsp;[&#8984;](#table-of-contents)&nbsp;[&#9654;](#next) &nbsp;Illiad Book 1
 <p>Sing, O goddess, the anger of Achilles son of Peleus, that brought countless ills upon the Achaeans.</p>
-## [&#9664;](#prev)&nbsp;[&#8984;](#intro)&nbsp;[&#9654;](#next) &nbsp;Illiad Book 2
+## [&#9664;](#prev)&nbsp;[&#8984;](#table-of-contents)&nbsp;[&#9654;](#next) &nbsp;Illiad Book 2
 <p>Now the other gods and the armed warriors on the plain slept soundly, but Jove was wakeful, for he was thinking how to do honour to Achilles, and destroyed much people at the ships of the Achaeans.</p>
