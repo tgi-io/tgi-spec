@@ -5,7 +5,7 @@
 #### Heading
 This is the deal.  *italic* **bold** This is github flavored markdown.  You can read about it here: https://github.com/github/markup
 #TOC
-[first](#)
+[[first](#)]
 [second](#)
 [third](#)
 #Lists
