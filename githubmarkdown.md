@@ -1,5 +1,5 @@
 #[What is the point?](#-point-is-this)
-# Markdown<span align="right">SPAN</span>
+# Markdown<div align="right">SPAN</div>
 ## Github flavorder that is
 ### Heading
 #### Heading
