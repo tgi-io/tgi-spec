@@ -4,6 +4,18 @@
 ### Heading
 #### Heading
 This is the deal.  *italic* **bold** This is github flavored markdown.  You can read about it here: https://github.com/github/markup
+#Lists
+ol, ul, li, dl, dt, dd
+<ul></ul>
+<dl>
+  <dt>Firefox</dt>
+  <dt>Mozilla Firefox</dt>
+  <dt>Fx</dt>
+  <dd>A free, open source, cross-platform, graphical web browser
+      developed by the Mozilla Corporation and hundreds of volunteers.</dd>
+
+  <!-- other terms and definitions -->
+</dl>
 #Tables
 
 You can create tables by assembling a list of words and dividing them with hyphens - (for the first row), and then separating each column with a pipe |:
