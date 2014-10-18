@@ -4,7 +4,8 @@
 - [INTRO](#) need to have description
 - [Spec Constructor Function](#) need to have description
 - [Illiad Book 1](#) need to have description
-- [Illiad Book 2](#) need to have descriptionbr>
+- [Illiad Book 2](#) need to have description
+
 ## Spec Constructor Function
 #### TGI SPEC
 <p>Javascript test and spec documentation framework.</p>
