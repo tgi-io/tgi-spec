@@ -2,10 +2,10 @@
 <p>There be dragons.</p>
 #### Table of Contents
 <ul>
-<li>[INTRO](#) need to have description</li>
-<li>[Spec Constructor Function](#) need to have description</li>
-<li>[Illiad Book 1](#) need to have description</li>
-<li>[Illiad Book 2](#) need to have description</li>
+ - [INTRO](#) need to have description<br>
+ - [Spec Constructor Function](#) need to have description<br>
+ - [Illiad Book 1](#) need to have description<br>
+ - [Illiad Book 2](#) need to have description<br>
 </ul>
 ## Spec Constructor Function
 #### TGI SPEC
