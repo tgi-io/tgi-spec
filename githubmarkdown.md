@@ -4,6 +4,12 @@
 ### Heading
 #### Heading
 This is the deal.  *italic* **bold** This is github flavored markdown.  You can read about it here: https://github.com/github/markup
+#TOC
+<blockquote>
+[first](#)
+[second](#)
+[third](#)
+</blockquote>
 #Lists
 ol, ul, li, dl, dt, dd
 <ul></ul>
