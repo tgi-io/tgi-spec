@@ -98,7 +98,8 @@ Spec.prototype.githubMarkdown = function () {
   function generateTOC() {
     var i;
     var text = '###Table of Contents\n';
-    for (i = 0; i < spec.nodes.length; i++) {
+    // todo skips first test should be overridable
+    for (i = 1; i < spec.nodes.length; i++) {
       var node = spec.nodes[i];
       if (node.type == 't') {
         text += '\n- [' + node.text + '](' + textToAnchor(node.text) + ') ' + node.description;
