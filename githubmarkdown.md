@@ -7,6 +7,11 @@ This is the deal.  *italic* **bold** This is github flavored markdown.  You can 
 #Lists
 ol, ul, li, dl, dt, dd
 <ul></ul>
+    <ul>
+      <li>second item first subitem</li>
+      <li>second item second subitem</li>
+      <li>second item third subitem</li>
+    </ul>
 <dl>
   <dt>Firefox</dt>
   <dt>Mozilla Firefox</dt>
