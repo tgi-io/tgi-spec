@@ -62,7 +62,11 @@ Spec.prototype.githubMarkdown = function () {
       text += '\n';
     switch (node.type) {
       case 't':
-        text += '## [&#9664;](#prev)&nbsp;[&#8984;](#intro)&nbsp;[&#9654;](#next) &nbsp;' + node.text;
+        if (i===0) {
+          text += '#' + node.text;
+        } else {
+          text += '## [&#9664;](#prev)&nbsp;[&#8984;](#intro)&nbsp;[&#9654;](#next) &nbsp;' + node.text;
+        }
         break;
       case 'h':
         text += '#### ' + node.text;
@@ -87,7 +91,7 @@ Spec.prototype.githubMarkdown = function () {
    */
   function generateTOC() {
     var i;
-    var text = '';
+    var text = '###Table of Contents\n';
     for (i = 0; i < spec.nodes.length; i++) {
       var node = spec.nodes[i];
       if (node.type == 't') {

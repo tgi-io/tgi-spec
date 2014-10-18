@@ -14,9 +14,7 @@ var testSpec = function(spec) {
  */
 spec.test('lib/tgi-spec-intro', 'INTRO', '', function (callback) {
   spec.paragraph('There be dragons!');
-  spec.heading('Table of Contents', function () {
-    spec.index();
-  });
+  spec.index();
 });
 
 /**

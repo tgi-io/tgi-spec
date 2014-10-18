@@ -1,6 +1,6 @@
-## [&#9664;](#prev)&nbsp;[&#8984;](#intro)&nbsp;[&#9654;](#next) &nbsp;INTRO
+#INTRO
 <p>There be dragons!</p>
-#### Table of Contents
+###Table of Contents
 
 - [INTRO](#) 
 - [Spec Constructor Function](#) it is what it is
