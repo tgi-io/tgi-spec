@@ -86,14 +86,14 @@ Spec.prototype.githubMarkdown = function () {
    */
   function generateTOC() {
     var i;
-    var text = '<ul>';
+    var text = '';
     for (i = 0; i < spec.nodes.length; i++) {
       var node = spec.nodes[i];
       if (node.type == 't') {
         text += '\n - [' + node.text + '](#) need to have description<br>' + '';
       }
     }
-    return text + '\n</ul>';
+    return text + '';
   }
 
   /**
