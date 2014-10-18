@@ -29,7 +29,7 @@ Spec.prototype.runTests = function (callback) {
     var node = new Spec.Node({type: 't'});
     node.text = script.testName;
     spec.nodes.push(node);
-    
+
     script.testScript(callback);
   }
   spec.completionCheck();
@@ -66,6 +66,9 @@ Spec.prototype.githubMarkdown = function () {
       case 'h':
         text += '#### ' + node.text;
         break;
+      case 'i':
+        text += generateTOC();
+        break;
       case 'e':
         text += codeBlock();
         break;
@@ -76,6 +79,21 @@ Spec.prototype.githubMarkdown = function () {
     }
   }
   return text;
+
+  /**
+   * Generate Table of Contents for each test
+   */
+  function generateTOC() {
+    var i;
+    var text = '<ul>';
+    for (i = 0; i < spec.nodes.length; i++) {
+      var node = spec.nodes[i];
+      if (node.type == 't') {
+        text += '\n<li>' + node.text + '</li>';
+      }
+    }
+    return text + '\n/<ul>';
+  }
 
   /**
    * take test callback and format for code display
@@ -154,8 +172,8 @@ Spec.prototype.githubMarkdown = function () {
 Spec.Node = function (args) {
   args = args || {};
   this.type = args.type || null;
-  if (!this.type || ((this.type != 't') && (this.type != 'h') && (this.type != 'p') && (this.type != 'e'))) {
-    throw new Error('Spec.Node type must be t, h, p or e');
+  if (!this.type || ((this.type != 't') && (this.type != 'h') && (this.type != 'i') && (this.type != 'p') && (this.type != 'e'))) {
+    throw new Error('Spec.Node type must be t, h, i, p or e');
   }
 };
 /**
@@ -297,6 +315,13 @@ Spec.prototype.example = function (text, results, testFunction) {
   this.nodes.push(node);
   return node;
 };
+
+Spec.prototype.generateIndex = function () {
+  var node = new Spec.Node({type: 'i'});
+  this.nodes.push(node);
+  return node;
+};
+
 /**
  *
  **/
