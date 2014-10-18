@@ -1,5 +1,5 @@
 #[What is the point?](#-point-is-this)
-# Markdown<span align:right>SPAN</span>
+# Markdown<span align="right">SPAN</span>
 ## Github flavorder that is
 ### Heading
 #### Heading
@@ -14,7 +14,6 @@ This is the deal.  *italic* **bold** This is github flavored markdown.  You can 
 #####[&#9664;](#)&nbsp;[&#8984;](#)&nbsp;[&#9654;](#) Unicode be here
 ######[&#9664;](#)&nbsp;[&#8984;](#)&nbsp;[&#9654;](#) Unicode be here
 #######[&#9664;](#)&nbsp;[&#8984;](#)&nbsp;[&#9654;](#) Unicode be here
-
 #TOC
 [[first](#)]
 [second](#)
