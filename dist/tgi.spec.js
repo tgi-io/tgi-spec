@@ -90,10 +90,10 @@ Spec.prototype.githubMarkdown = function () {
     for (i = 0; i < spec.nodes.length; i++) {
       var node = spec.nodes[i];
       if (node.type == 't') {
-        text += '\n - [' + node.text + '](#) need to have description<br>' + '';
+        text += '\n- [' + node.text + '](#) need to have description';
       }
     }
-    return text + '';
+    return text + '\n\n';
   }
 
   /**
