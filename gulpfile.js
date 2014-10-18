@@ -91,7 +91,7 @@ gulp.task('spec', ['lint'], function (callback) {
       console.log(stdout);
       callback(error);
     });
-  }, 100); // Without this sometimes the exec runs before script is written/flushed ?
+  }, 250); // Without this sometimes the exec runs before script is written/flushed ?
 });
 
 // Default Task

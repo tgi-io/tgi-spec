@@ -82,6 +82,7 @@ Spec.prototype.githubMarkdown = function () {
 
   /**
    * Generate Table of Contents for each test
+   * [What is the point?](#-point-is-this)
    */
   function generateTOC() {
     var i;
@@ -89,7 +90,7 @@ Spec.prototype.githubMarkdown = function () {
     for (i = 0; i < spec.nodes.length; i++) {
       var node = spec.nodes[i];
       if (node.type == 't') {
-        text += '\n<li>' + node.text + '</li>';
+        text += '\n<li>[' + node.text + '](#) need to have description' + '</li>';
       }
     }
     return text + '\n</ul>';
@@ -240,7 +241,7 @@ Spec.Test = function (spec, expectedValue, testFunction) {
     spec.testsPending--;
 };
 /**
- *
+ * Assertions
  */
 Spec.Test.prototype.shouldBeTrue = function (expression) {
   this.assertionsMade++;
@@ -252,7 +253,6 @@ Spec.Test.prototype.shouldBeFalse = function (expression) {
   if (expression !== false)
     this.assertionsFailed++;
 };
-
 Spec.Test.prototype.shouldThrowError = function (err, func) {
   var gotError = false;
   try {
@@ -315,20 +315,21 @@ Spec.prototype.example = function (text, results, testFunction) {
   this.nodes.push(node);
   return node;
 };
-
-Spec.prototype.generateIndex = function () {
+/**
+ * Create index / TOC
+ */
+Spec.prototype.index = function () {
   var node = new Spec.Node({type: 'i'});
   this.nodes.push(node);
   return node;
 };
-
 /**
  *
  **/
 //Spec.prototype.show = function () {
 //};
 /**
- *
+ * Encapsulate expected test results with async tag
  **/
 Spec.prototype.asyncResults = function (arg) {
   return {async: true, expectedValue: arg};
