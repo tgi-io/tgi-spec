@@ -1,5 +1,8 @@
 #[What is the point?](#-point-is-this)
-<div align="center">WHAT IT BE</div>
+<div align="center"><H2>WHAT IT BE</H2></div>
+<div align="center"><H4>
+[&#9664;](#)&nbsp;[&#8984;](#)&nbsp;[&#9654;](#)
+</H4></div>
 ## Github flavorder that is
 ### Heading
 #### Heading
