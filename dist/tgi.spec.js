@@ -117,7 +117,7 @@ Spec.prototype.githubMarkdown = function () {
 
   function getPreviousLink(index) {
     var i;
-    for (i = index; i >= 0; i--) {
+    for (i = index-1; i >= 0; i--) {
       var node = spec.nodes[i];
       if (node.type == 't') {
         return textToAnchor(node.text);
@@ -128,7 +128,7 @@ Spec.prototype.githubMarkdown = function () {
 
   function getNextLink(index) {
     var i;
-    for (i = index; i < spec.nodes.length; i++) {
+    for (i = index+1; i < spec.nodes.length; i++) {
       var node = spec.nodes[i];
       if (node.type == 't') {
         return textToAnchor(node.text);
