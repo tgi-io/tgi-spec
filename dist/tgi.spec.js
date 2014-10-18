@@ -62,7 +62,7 @@ Spec.prototype.githubMarkdown = function () {
       text += '\n';
     switch (node.type) {
       case 't':
-        text += '## [&#9664;](#prev)&nbsp;[&#8984;](#intro)[&#9654;](#next) ' + node.text;
+        text += '## [&#9664;](#prev)&nbsp;[&#8984;](#intro)&nbsp;[&#9654;](#next) &nbsp;' + node.text;
         break;
       case 'h':
         text += '#### ' + node.text;
