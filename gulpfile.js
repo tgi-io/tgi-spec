@@ -86,12 +86,13 @@ gulp.task('cover', function (callback) {
 
 // Spec Task
 gulp.task('spec', ['lint'], function (callback) {
-  setTimeout(function () {
+  // Just run twice arg!!!
+  //setTimeout(function () {
     childProcess.exec('node spec/node-make-spec-md.js', function (error, stdout, stderr) {
       console.log(stdout);
       callback(error);
     });
-  }, 250); // Without this sometimes the exec runs before script is written/flushed ?
+  //}, 250); // Without this sometimes the exec runs before script is written/flushed ?
 });
 
 // Default Task

@@ -13,7 +13,7 @@ var testSpec = function(spec) {
  * Doc Intro
  */
 spec.test('lib/tgi-spec-intro', 'INTRO', function (callback) {
-  spec.paragraph('There be dragons.');
+  spec.paragraph('There be dragons!');
   spec.heading('Table of Contents', function () {
     spec.index();
   });
