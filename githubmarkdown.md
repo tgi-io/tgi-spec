@@ -4,6 +4,23 @@
 ### Heading
 #### Heading
 This is the deal.  *italic* **bold** This is github flavored markdown.  You can read about it here: https://github.com/github/markup
+#Lists
+ol, ul, li, dl, dt, dd
+<ul></ul>
+<ul>
+  <li>second item first subitem</li>
+  <li>second item second subitem</li>
+  <li>second item third subitem</li>
+</ul>
+<dl>
+  <dt>Firefox</dt>
+  <dt>Mozilla Firefox</dt>
+  <dt>Fx</dt>
+  <dd>A free, open source, cross-platform, graphical web browser
+      developed by the Mozilla Corporation and hundreds of volunteers.</dd>
+
+  <!-- other terms and definitions -->
+</dl>
 #Tables
 
 You can create tables by assembling a list of words and dividing them with hyphens - (for the first row), and then separating each column with a pipe |:
@@ -135,5 +152,5 @@ Hey you can go [#heading](#heading)
 <p>I'm sorry but sometimes spam is needed</p>
 <p>I'm sorry but sometimes spam is needed</p>
 <p>I'm sorry but sometimes spam is needed</p>
-#[&#119582;](#what-is-the-point) Point Is this
+#[&#8593;](#what-is-the-point)&nbsp;[&#8595;](#what-is-the-point)[&#119582;](#what-is-the-point) Point Is this
 The point is to test how anchors with with this funky thing called github flavored markdown.
