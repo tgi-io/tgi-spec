@@ -6,7 +6,7 @@
 <li>Spec Constructor Function</li>
 <li>Illiad Book 1</li>
 <li>Illiad Book 2</li>
-/<ul>
+</ul>
 ## Spec Constructor Function
 #### TGI SPEC
 <p>Javascript test and spec documentation framework.</p>

@@ -92,7 +92,7 @@ Spec.prototype.githubMarkdown = function () {
         text += '\n<li>' + node.text + '</li>';
       }
     }
-    return text + '\n/<ul>';
+    return text + '\n</ul>';
   }
 
   /**
