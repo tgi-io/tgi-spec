@@ -4,7 +4,8 @@
 [INTRO](#)
 <ul>
 <li>
-[INTRO](#) need to have description</li>
+[INTRO](#) need to have description
+</li>
 <li>[Spec Constructor Function](#) need to have description</li>
 <li>[Illiad Book 1](#eat) need to have description</li>
 <li>[Illiad Book 2](#) need to have description</li>
