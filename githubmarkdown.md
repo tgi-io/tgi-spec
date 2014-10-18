@@ -4,6 +4,9 @@
 ### Heading
 #### Heading
 This is the deal.  *italic* **bold** This is github flavored markdown.  You can read about it here: https://github.com/github/markup
+#Stuff
+#[&#8595;](#)&nbsp;[&#9786;](#)&nbsp;[&#8593;](#) Unicode be here
+
 #TOC
 [[first](#)]
 [second](#)
