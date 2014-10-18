@@ -70,7 +70,7 @@ Spec.prototype.githubMarkdown = function () {
         if (i === 0) {
           text += '#' + node.text;
         } else {
-          text += '## [&#9664;](#prev)&nbsp;[&#8984;](#table-of-contents)&nbsp;[&#9654;](#next) &nbsp;' + node.text;
+          text += '## [&#9664;](' + getPreviousLink(i) + ')&nbsp;[&#8984;](#table-of-contents)&nbsp;[&#9654;](' + getNextLink(i) + ') &nbsp;' + node.text;
         }
         break;
       case 'h':
@@ -109,11 +109,32 @@ Spec.prototype.githubMarkdown = function () {
   }
 
   /**
-   * Convert node text to github style anchor
+   * helpers
    */
   function textToAnchor(text) {
+    return '#-' + text.toLowerCase().replace(/ /g, '-');
+  }
 
-    return '#-' + text.toLowerCase().replace(/ /g,'-');
+  function getPreviousLink(index) {
+    var i;
+    for (i = index; i >= 0; i--) {
+      var node = spec.nodes[i];
+      if (node.type == 't') {
+        return textToAnchor(node.text);
+      }
+    }
+    return '#';
+  }
+
+  function getNextLink(index) {
+    var i;
+    for (i = index; i < spec.nodes.length; i++) {
+      var node = spec.nodes[i];
+      if (node.type == 't') {
+        return textToAnchor(node.text);
+      }
+    }
+    return '#';
   }
 
   /**
