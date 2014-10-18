@@ -15,8 +15,8 @@ var Spec = function () {
   spec.testsPending = 0;
   spec.testsFailed = 0;
 };
-Spec.prototype.test = function (testSource, testName, testScript) {
-  this.scripts.push({testSource: testSource, testName: testName, testScript: testScript});
+Spec.prototype.test = function (testSource, testName, testDescription, testScript) {
+  this.scripts.push({testSource: testSource, testName: testName, testDescription: testDescription, testScript: testScript});
 };
 Spec.prototype.runTests = function (callback) {
   var spec = this;
@@ -28,6 +28,7 @@ Spec.prototype.runTests = function (callback) {
     // create test node
     var node = new Spec.Node({type: 't'});
     node.text = script.testName;
+    node.description = script.testDescription;
     spec.nodes.push(node);
 
     script.testScript(callback);
@@ -90,7 +91,7 @@ Spec.prototype.githubMarkdown = function () {
     for (i = 0; i < spec.nodes.length; i++) {
       var node = spec.nodes[i];
       if (node.type == 't') {
-        text += '\n- [' + node.text + '](#) need to have description';
+        text += '\n- [' + node.text + '](#) ' + node.description;
       }
     }
     return text + '\n\n';
