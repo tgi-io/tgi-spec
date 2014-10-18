@@ -8,13 +8,12 @@ This is the deal.  *italic* **bold** This is github flavored markdown.  You can 
 #[&#8595;](#)&nbsp;[&#9786;](#)&nbsp;[&#8593;](#) Unicode be here
 #[&#9664;](#)&nbsp;[&#8984;](#)&nbsp;[&#9654;](#) Unicode be here
 ##[&#9664;](#)&nbsp;[&#8984;](#)&nbsp;[&#9654;](#) Unicode be here
+## Unicode be here [&#9664;](#)&nbsp;[&#8984;](#)&nbsp;[&#9654;](#)
 ###[&#9664;](#)&nbsp;[&#8984;](#)&nbsp;[&#9654;](#) Unicode be here
 ####[&#9664;](#)&nbsp;[&#8984;](#)&nbsp;[&#9654;](#) Unicode be here
 #####[&#9664;](#)&nbsp;[&#8984;](#)&nbsp;[&#9654;](#) Unicode be here
 ######[&#9664;](#)&nbsp;[&#8984;](#)&nbsp;[&#9654;](#) Unicode be here
 #######[&#9664;](#)&nbsp;[&#8984;](#)&nbsp;[&#9654;](#) Unicode be here
-########[&#9664;](#)&nbsp;[&#8984;](#)&nbsp;[&#9654;](#) Unicode be here
-#########[&#9664;](#)&nbsp;[&#8984;](#)&nbsp;[&#9654;](#) Unicode be here
 
 #TOC
 [[first](#)]
