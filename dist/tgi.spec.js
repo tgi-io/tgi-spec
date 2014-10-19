@@ -199,9 +199,18 @@ Spec.prototype.githubMarkdown = function () {
       if (resultsText.length) resultsText += '<br>';
       resultsText += 'Assertion(s) failed\n';
     }
+
+    // this.stuffLogged.push(stuff);
+
+    if (true) {
+      codeText = 'what\nthe\nfuck\n' + codeText;
+    }
+
+  if (resultsText) {
     codeText += '\n<blockquote>' +
     resultsText +
     '</blockquote>';
+  }
     return codeText;
   }
 
@@ -234,6 +243,7 @@ Spec.Test = function (spec, expectedValue, testFunction) {
   test.testAsync = false;
   test.assertionsMade = 0;
   test.assertionsFailed = 0;
+  test.stuffLogged = [];
   try {
     var returnValue = test.testFunction(function (callbackReturns) {
       spec.testsPending--;
@@ -313,7 +323,7 @@ Spec.Test.prototype.shouldThrowError = function (err, func) {
  * Logging
  **/
 Spec.Test.prototype.log = function (stuff) {
-  console.log(stuff);
+  this.stuffLogged.push(stuff);
 };
 
 /**
