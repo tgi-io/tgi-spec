@@ -2,10 +2,10 @@
 #### TGI SPEC
 <p>Javascript test and spec documentation framework.</p>
 #### METHODS
-#### heading(text,function(){}
+#### heading(text,function(){})
 <p>heading test followed by optional function used for indenting structure.  The presentation may reflect this as heading levels (todo for github markdown).</p>
 #### paragraph(text)
-<p>here is the best example: https://github.com/tgicloud/tgi-spec/blob/master/lib/tgi-spec.test.js#L36</p>
+<p>here is the best example: https://github.com/tgicloud/tgi-spec/blob/master/lib/tgi-spec.test.js#L24</p>
 #### example(text, results, testFunction)
 <p>The example function provides a test description, expected outcome and funtion to invoke for test.</p>
 &nbsp;<b><i>Code with no errors:</i></b>

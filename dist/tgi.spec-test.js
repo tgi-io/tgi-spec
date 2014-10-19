@@ -24,12 +24,12 @@ spec.test('lib/tgi-spec', 'Spec Constructor Function', 'it is what it is', funct
   spec.heading('TGI SPEC', function () {
     spec.paragraph('Javascript test and spec documentation framework.');
     spec.heading('METHODS', function () {
-      spec.heading('heading(text,function(){}', function () {
+      spec.heading('heading(text,function(){})', function () {
         spec.paragraph('heading test followed by optional function used for indenting structure.  The presentation may' +
         ' reflect this as heading levels (todo for github markdown).');
       });
       spec.heading('paragraph(text)', function () {
-        spec.paragraph('here is the best example: https://github.com/tgicloud/tgi-spec/blob/master/lib/tgi-spec.test.js#L36');
+        spec.paragraph('here is the best example: https://github.com/tgicloud/tgi-spec/blob/master/lib/tgi-spec.test.js#L24');
       });
 
       spec.heading('example(text, results, testFunction)', function () {
