@@ -62,7 +62,7 @@ spec.test('lib/tgi-spec', 'Spec Constructor Function', 'it is what it is', funct
           });
         });
         spec.example('can log expression output', undefined, function () {
-          this.log('what it be');
+          this.log(this.toString());
         });
 
         /**

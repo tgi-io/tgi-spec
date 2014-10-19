@@ -51,6 +51,6 @@ this.shouldThrowError(Error('fubar'), function () {
 ```
 &nbsp;<b><i>can log expression output:</i></b>
 ```javascript
-this.log('what it be');
+this.log(this.toString());
 ```
-<blockquote><strong>log: </strong>what it be<br></blockquote>
+<blockquote><strong>log: </strong>[object Object]<br></blockquote>
