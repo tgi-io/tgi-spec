@@ -53,4 +53,4 @@ this.shouldThrowError(Error('fubar'), function () {
 ```javascript
 this.log('what it be');
 ```
-<blockquote>log:what it be<br></blockquote>
+<blockquote><strong>log: </strong>what it be<br></blockquote>

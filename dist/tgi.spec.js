@@ -205,7 +205,7 @@ Spec.prototype.githubMarkdown = function () {
     if (node.test.stuffLogged) {
       for (i = 0; i < node.test.stuffLogged.length; i++) {
         var log = node.test.stuffLogged[i];
-        resultsText = 'log:' + log + '<br>' + resultsText;
+        resultsText = '<strong>log: </strong>' + log + '<br>' + resultsText;
       }
     }
 
