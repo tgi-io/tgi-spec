@@ -203,7 +203,7 @@ Spec.prototype.githubMarkdown = function () {
     // this.stuffLogged.push(stuff);
 
     if (true) {
-      resultsText = 'what\nthe\nfuck\n' + resultsText;
+      resultsText = 'what<br>he<br>fuck<br>' + resultsText;
     }
 
   if (resultsText) {
