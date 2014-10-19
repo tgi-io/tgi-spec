@@ -18,7 +18,7 @@ var testSpec = function(spec) {
 //});
 
 /**
- * The Spec
+ * The Specz
  */
 spec.test('lib/tgi-spec', 'Spec Constructor Function', 'it is what it is', function (callback) {
   spec.heading('TGI SPEC', function () {
@@ -61,6 +61,10 @@ spec.test('lib/tgi-spec', 'Spec Constructor Function', 'it is what it is', funct
             throw Error('fubar');
           });
         });
+        spec.example('can log expression output', undefined, function () {
+          this.log('what it be');
+        });
+
         /**
          * Uncomment to test fail
          */

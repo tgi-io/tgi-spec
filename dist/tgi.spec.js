@@ -249,10 +249,10 @@ Spec.Test = function (spec, expectedValue, testFunction) {
         spec.testCallback({error: 'assertions failed: ' + testReturnValue});
       }
     });
+    testReturnValue = returnValue instanceof Error ? returnValue.toString() : returnValue;
     if (typeof expectedValue !== 'undefined') {
       test.testAsync = expectedValue.async;
       testExpectedValue = expectedValue instanceof Error ? expectedValue.toString() : expectedValue;
-      testReturnValue = returnValue instanceof Error ? returnValue.toString() : returnValue;
       if (!test.testAsync) {
         test.returnValue = testReturnValue;
         if (testExpectedValue != testReturnValue) {
@@ -308,6 +308,12 @@ Spec.Test.prototype.shouldThrowError = function (err, func) {
   if (!gotError) {
     throw('EXPECTED ERROR(' + err + ')');
   }
+};
+/**
+ * Logging
+ **/
+Spec.Test.prototype.log = function (stuff) {
+  console.log(stuff);
 };
 
 /**
@@ -365,11 +371,6 @@ Spec.prototype.index = function () {
   this.nodes.push(node);
   return node;
 };
-/**
- *
- **/
-//Spec.prototype.show = function () {
-//};
 /**
  * Encapsulate expected test results with async tag
  **/
