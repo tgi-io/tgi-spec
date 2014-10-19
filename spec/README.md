@@ -51,6 +51,6 @@ this.shouldThrowError(Error('fubar'), function () {
 ```
 &nbsp;<b><i>can log expression output:</i></b>
 ```javascript
-this.log(this.toString());
+this.log('ponder the meaning of life: ' + 42 * 10);
 ```
-<blockquote><strong>log: </strong>[object Object]<br></blockquote>
+<blockquote><strong>log: </strong>ponder the meaning of life: 420<br></blockquote>
