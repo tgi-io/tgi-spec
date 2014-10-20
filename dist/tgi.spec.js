@@ -330,6 +330,21 @@ Spec.Test.prototype.shouldBeFalse = function (expression) {
   if (expression !== false)
     this.assertionsFailed++;
 };
+//Spec.Test.prototype.shouldBeTruthy = function (expression) {
+//  this.assertionsMade++;
+//  if (expression != true) // jshint ignore:line
+//    this.assertionsFailed++;
+//};
+Spec.Test.prototype.shouldBeTruthy = function (expression) {
+  this.assertionsMade++;
+  if (!expression)
+    this.assertionsFailed++;
+};
+Spec.Test.prototype.shouldBeFalsy = function (expression) {
+  this.assertionsMade++;
+  if (expression != false) // jshint ignore:line
+    this.assertionsFailed++;
+};
 Spec.Test.prototype.shouldThrowError = function (err, func) {
   var gotError = false;
   try {

@@ -57,6 +57,10 @@ spec.test('lib/tgi-spec', 'Spec Constructor Function', 'it is what it is', funct
         spec.example('Can contain one or more assertions', undefined, function () {
           this.shouldBeTrue(2 === 2);
           this.shouldBeFalse(0.1 + 0.2 === 0.3);
+          this.shouldBeTruthy('To thine own self be true');
+          this.shouldBeFalsy('');
+          this.shouldBeTruthy(42);
+          this.shouldBeFalsy(0);
           this.shouldThrowError('*', function () { // Any error
             throw Error();
           });
