@@ -1,8 +1,12 @@
 #INTRO
-<p>There be dragons!</p>
-<p>This is the deal with "*".  *one* **two**</p>
-<p>This is the deal with "_".  _one_ __two__</p>
-<p>This is the deal with "-".  -one- --two--</p>
+There be dragons!    
+
+This is the deal with "*".  *one* **two**    
+
+This is the deal with "_".  _one_ __two__    
+
+This is the deal with "-".  -one- --two--    
+
 ###Table of Contents
 
 - [Spec Constructor Function](#-spec-constructor-function) it is what it is
@@ -13,14 +17,18 @@
 
 ## [&#9664;](#-intro)&nbsp;[&#8984;](#table-of-contents)&nbsp;[&#9654;](#-illiad-book-1) &nbsp;Spec Constructor Function
 #### TGI SPEC
-<p>Javascript test and spec documentation framework.</p>
+Javascript test and spec documentation framework.    
+
 #### METHODS
 #### heading(text,function(){})
-<p>heading test followed by optional function used for indenting structure.  The presentation may reflect this as heading levels (todo for github markdown).</p>
+heading test followed by optional function used for indenting structure.  The presentation may reflect this as heading levels (todo for github markdown).    
+
 #### paragraph(text)
-<p>here is the best example: https://github.com/tgicloud/tgi-spec/blob/master/lib/tgi-spec.test.js#L24</p>
+here is the best example: https://github.com/tgicloud/tgi-spec/blob/master/lib/tgi-spec.test.js#L24    
+
 #### example(text, results, testFunction)
-<p>The example function provides a test description, expected outcome and funtion to invoke for test.</p>
+The example function provides a test description, expected outcome and funtion to invoke for test.    
+
 &nbsp;<b><i>Code with no errors:</i></b>
 ```javascript
 // Hello World
@@ -68,108 +76,209 @@ this.log('ponder the meaning of life: ' + 42 * 10);
 ```
 <blockquote><strong>log: </strong>ponder the meaning of life: 420<br></blockquote>
 #### SPAM
-<p>I got 99 problems and this is #1</p>
-<p>I got 99 problems and this is #2</p>
-<p>I got 99 problems and this is #3</p>
-<p>I got 99 problems and this is #4</p>
-<p>I got 99 problems and this is #5</p>
-<p>I got 99 problems and this is #6</p>
-<p>I got 99 problems and this is #7</p>
-<p>I got 99 problems and this is #8</p>
-<p>I got 99 problems and this is #9</p>
-<p>I got 99 problems and this is #10</p>
-<p>I got 99 problems and this is #11</p>
-<p>I got 99 problems and this is #12</p>
-<p>I got 99 problems and this is #13</p>
-<p>I got 99 problems and this is #14</p>
-<p>I got 99 problems and this is #15</p>
-<p>I got 99 problems and this is #16</p>
-<p>I got 99 problems and this is #17</p>
-<p>I got 99 problems and this is #18</p>
-<p>I got 99 problems and this is #19</p>
-<p>I got 99 problems and this is #20</p>
-<p>I got 99 problems and this is #21</p>
-<p>I got 99 problems and this is #22</p>
-<p>I got 99 problems and this is #23</p>
-<p>I got 99 problems and this is #24</p>
-<p>I got 99 problems and this is #25</p>
-<p>I got 99 problems and this is #26</p>
-<p>I got 99 problems and this is #27</p>
-<p>I got 99 problems and this is #28</p>
-<p>I got 99 problems and this is #29</p>
-<p>I got 99 problems and this is #30</p>
-<p>I got 99 problems and this is #31</p>
-<p>I got 99 problems and this is #32</p>
-<p>I got 99 problems and this is #33</p>
-<p>I got 99 problems and this is #34</p>
-<p>I got 99 problems and this is #35</p>
-<p>I got 99 problems and this is #36</p>
-<p>I got 99 problems and this is #37</p>
-<p>I got 99 problems and this is #38</p>
-<p>I got 99 problems and this is #39</p>
-<p>I got 99 problems and this is #40</p>
-<p>I got 99 problems and this is #41</p>
-<p>I got 99 problems and this is #42</p>
-<p>I got 99 problems and this is #43</p>
-<p>I got 99 problems and this is #44</p>
-<p>I got 99 problems and this is #45</p>
-<p>I got 99 problems and this is #46</p>
-<p>I got 99 problems and this is #47</p>
-<p>I got 99 problems and this is #48</p>
-<p>I got 99 problems and this is #49</p>
-<p>I got 99 problems and this is #50</p>
-<p>I got 99 problems and this is #51</p>
-<p>I got 99 problems and this is #52</p>
-<p>I got 99 problems and this is #53</p>
-<p>I got 99 problems and this is #54</p>
-<p>I got 99 problems and this is #55</p>
-<p>I got 99 problems and this is #56</p>
-<p>I got 99 problems and this is #57</p>
-<p>I got 99 problems and this is #58</p>
-<p>I got 99 problems and this is #59</p>
-<p>I got 99 problems and this is #60</p>
-<p>I got 99 problems and this is #61</p>
-<p>I got 99 problems and this is #62</p>
-<p>I got 99 problems and this is #63</p>
-<p>I got 99 problems and this is #64</p>
-<p>I got 99 problems and this is #65</p>
-<p>I got 99 problems and this is #66</p>
-<p>I got 99 problems and this is #67</p>
-<p>I got 99 problems and this is #68</p>
-<p>I got 99 problems and this is #69</p>
-<p>I got 99 problems and this is #70</p>
-<p>I got 99 problems and this is #71</p>
-<p>I got 99 problems and this is #72</p>
-<p>I got 99 problems and this is #73</p>
-<p>I got 99 problems and this is #74</p>
-<p>I got 99 problems and this is #75</p>
-<p>I got 99 problems and this is #76</p>
-<p>I got 99 problems and this is #77</p>
-<p>I got 99 problems and this is #78</p>
-<p>I got 99 problems and this is #79</p>
-<p>I got 99 problems and this is #80</p>
-<p>I got 99 problems and this is #81</p>
-<p>I got 99 problems and this is #82</p>
-<p>I got 99 problems and this is #83</p>
-<p>I got 99 problems and this is #84</p>
-<p>I got 99 problems and this is #85</p>
-<p>I got 99 problems and this is #86</p>
-<p>I got 99 problems and this is #87</p>
-<p>I got 99 problems and this is #88</p>
-<p>I got 99 problems and this is #89</p>
-<p>I got 99 problems and this is #90</p>
-<p>I got 99 problems and this is #91</p>
-<p>I got 99 problems and this is #92</p>
-<p>I got 99 problems and this is #93</p>
-<p>I got 99 problems and this is #94</p>
-<p>I got 99 problems and this is #95</p>
-<p>I got 99 problems and this is #96</p>
-<p>I got 99 problems and this is #97</p>
-<p>I got 99 problems and this is #98</p>
-<p>I got 99 problems and this is #99</p>
+I got 99 problems and this is #1    
+
+I got 99 problems and this is #2    
+
+I got 99 problems and this is #3    
+
+I got 99 problems and this is #4    
+
+I got 99 problems and this is #5    
+
+I got 99 problems and this is #6    
+
+I got 99 problems and this is #7    
+
+I got 99 problems and this is #8    
+
+I got 99 problems and this is #9    
+
+I got 99 problems and this is #10    
+
+I got 99 problems and this is #11    
+
+I got 99 problems and this is #12    
+
+I got 99 problems and this is #13    
+
+I got 99 problems and this is #14    
+
+I got 99 problems and this is #15    
+
+I got 99 problems and this is #16    
+
+I got 99 problems and this is #17    
+
+I got 99 problems and this is #18    
+
+I got 99 problems and this is #19    
+
+I got 99 problems and this is #20    
+
+I got 99 problems and this is #21    
+
+I got 99 problems and this is #22    
+
+I got 99 problems and this is #23    
+
+I got 99 problems and this is #24    
+
+I got 99 problems and this is #25    
+
+I got 99 problems and this is #26    
+
+I got 99 problems and this is #27    
+
+I got 99 problems and this is #28    
+
+I got 99 problems and this is #29    
+
+I got 99 problems and this is #30    
+
+I got 99 problems and this is #31    
+
+I got 99 problems and this is #32    
+
+I got 99 problems and this is #33    
+
+I got 99 problems and this is #34    
+
+I got 99 problems and this is #35    
+
+I got 99 problems and this is #36    
+
+I got 99 problems and this is #37    
+
+I got 99 problems and this is #38    
+
+I got 99 problems and this is #39    
+
+I got 99 problems and this is #40    
+
+I got 99 problems and this is #41    
+
+I got 99 problems and this is #42    
+
+I got 99 problems and this is #43    
+
+I got 99 problems and this is #44    
+
+I got 99 problems and this is #45    
+
+I got 99 problems and this is #46    
+
+I got 99 problems and this is #47    
+
+I got 99 problems and this is #48    
+
+I got 99 problems and this is #49    
+
+I got 99 problems and this is #50    
+
+I got 99 problems and this is #51    
+
+I got 99 problems and this is #52    
+
+I got 99 problems and this is #53    
+
+I got 99 problems and this is #54    
+
+I got 99 problems and this is #55    
+
+I got 99 problems and this is #56    
+
+I got 99 problems and this is #57    
+
+I got 99 problems and this is #58    
+
+I got 99 problems and this is #59    
+
+I got 99 problems and this is #60    
+
+I got 99 problems and this is #61    
+
+I got 99 problems and this is #62    
+
+I got 99 problems and this is #63    
+
+I got 99 problems and this is #64    
+
+I got 99 problems and this is #65    
+
+I got 99 problems and this is #66    
+
+I got 99 problems and this is #67    
+
+I got 99 problems and this is #68    
+
+I got 99 problems and this is #69    
+
+I got 99 problems and this is #70    
+
+I got 99 problems and this is #71    
+
+I got 99 problems and this is #72    
+
+I got 99 problems and this is #73    
+
+I got 99 problems and this is #74    
+
+I got 99 problems and this is #75    
+
+I got 99 problems and this is #76    
+
+I got 99 problems and this is #77    
+
+I got 99 problems and this is #78    
+
+I got 99 problems and this is #79    
+
+I got 99 problems and this is #80    
+
+I got 99 problems and this is #81    
+
+I got 99 problems and this is #82    
+
+I got 99 problems and this is #83    
+
+I got 99 problems and this is #84    
+
+I got 99 problems and this is #85    
+
+I got 99 problems and this is #86    
+
+I got 99 problems and this is #87    
+
+I got 99 problems and this is #88    
+
+I got 99 problems and this is #89    
+
+I got 99 problems and this is #90    
+
+I got 99 problems and this is #91    
+
+I got 99 problems and this is #92    
+
+I got 99 problems and this is #93    
+
+I got 99 problems and this is #94    
+
+I got 99 problems and this is #95    
+
+I got 99 problems and this is #96    
+
+I got 99 problems and this is #97    
+
+I got 99 problems and this is #98    
+
+I got 99 problems and this is #99    
+
 ## [&#9664;](#-spec-constructor-function)&nbsp;[&#8984;](#table-of-contents)&nbsp;[&#9654;](#-illiad-book-2) &nbsp;Illiad Book 1
-<p>Sing, O goddess, the anger of Achilles son of Peleus, that brought countless ills upon the Achaeans. </p>
+Sing, O goddess, the anger of Achilles son of Peleus, that brought countless ills upon the Achaeans.     
+
 ## [&#9664;](#-illiad-book-1)&nbsp;[&#8984;](#table-of-contents)&nbsp;[&#9654;](#-summary) &nbsp;Illiad Book 2
-<p>Now the other gods and the armed warriors on the plain slept soundly, but Jove was wakeful, for he was thinking how to do honour to Achilles, and destroyed much people at the ships of the Achaeans.</p>
+Now the other gods and the armed warriors on the plain slept soundly, but Jove was wakeful, for he was thinking how to do honour to Achilles, and destroyed much people at the ships of the Achaeans.    
+
 ## [&#9664;](#-illiad-book-2)&nbsp;[&#8984;](#table-of-contents) &nbsp;Summary
-<p>This documentation generated with https://github.com/tgicloud/tgi-spec.<br>TODO put testin stats here.</p>
+This documentation generated with https://github.com/tgicloud/tgi-spec.<br>TODO put testin stats here.    

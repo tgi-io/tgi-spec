@@ -92,7 +92,7 @@ Spec.prototype.githubMarkdown = function () {
         break;
       default:
       case 'p':
-        text += '<p>' + node.text + '</p>';
+        text += node.text + '    \n';
         break;
     }
   }
