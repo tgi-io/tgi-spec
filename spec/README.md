@@ -2,10 +2,10 @@
 <p>There be dragons!</p>
 ###Table of Contents
 
-- [Spec Constructor Function](spec-constructor-function) it is what it is
-- [Illiad Book 1](illiad-book-1) it is what it is
-- [Illiad Book 2](illiad-book-2) it is what it is
-- [Summary](summary) for this spec.
+- [Spec Constructor Function](#-spec-constructor-function) it is what it is
+- [Illiad Book 1](#-illiad-book-1) it is what it is
+- [Illiad Book 2](#-illiad-book-2) it is what it is
+- [Summary](#-summary) for this spec.
 
 
 ## [&#9664;](#-intro)&nbsp;[&#8984;](#table-of-contents)&nbsp;[&#9654;](#-illiad-book-1) &nbsp;Spec Constructor Function
