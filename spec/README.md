@@ -1,5 +1,8 @@
 #INTRO
 <p>There be dragons!</p>
+<p>This is the deal with "*".  *one* **two**</p>
+<p>This is the deal with "_".  _one_ __two__</p>
+<p>This is the deal with "-".  -one- --two--</p>
 ###Table of Contents
 
 - [Spec Constructor Function](#-spec-constructor-function) it is what it is

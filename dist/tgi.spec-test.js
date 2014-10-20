@@ -14,6 +14,9 @@ var testSpec = function(spec) {
  */
 spec.test('lib/tgi-spec-intro', 'INTRO', '', function (callback) {
   spec.paragraph('There be dragons!');
+  spec.paragraph('This is the deal with "*".  *one* **two**');
+  spec.paragraph('This is the deal with "_".  _one_ __two__');
+  spec.paragraph('This is the deal with "-".  -one- --two--');
   spec.index();
 });
 
