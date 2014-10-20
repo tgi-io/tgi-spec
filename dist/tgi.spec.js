@@ -75,8 +75,8 @@ Spec.prototype.githubMarkdown = function () {
       case 't':
         if (i === 0) {
           text += '#' + node.text;
-        } else if (i == spec.nodes.length-1) {
-          text += '## [&#9664;](' + getPreviousLink(i) + ')&nbsp;[&#8984;](#table-of-contents)&nbsp;[&#9670;](' + getNextLink(i-1) + ') &nbsp;' + node.text;
+        } else if (i == spec.nodes.length - 1) {
+          text += '## [&#9664;](' + getPreviousLink(i) + ')&nbsp;[&#8984;](#table-of-contents)&nbsp;[&#9670;](' + getNextLink(i - 1) + ') &nbsp;' + node.text;
         } else {
           text += '## [&#9664;](' + getPreviousLink(i) + ')&nbsp;[&#8984;](#table-of-contents)&nbsp;[&#9654;](' + getNextLink(i) + ') &nbsp;' + node.text;
         }
@@ -129,10 +129,10 @@ Spec.prototype.githubMarkdown = function () {
     for (i = index - 1; i >= 0; i--) {
       var node = spec.nodes[i];
       if (node.type == 't') {
-        if (index==1)
-          return '#' +textToAnchor( node.text);
+        if (index == 1)
+          return '#' + textToAnchor(node.text);
         else
-          return '#-' +textToAnchor( node.text);
+          return '#-' + textToAnchor(node.text);
       }
     }
     return '#';
@@ -143,7 +143,7 @@ Spec.prototype.githubMarkdown = function () {
     for (i = index + 1; i < spec.nodes.length; i++) {
       var node = spec.nodes[i];
       if (node.type == 't') {
-        return textToAnchor(node.text);
+        return '#-' + textToAnchor(node.text);
       }
     }
     return '#';
