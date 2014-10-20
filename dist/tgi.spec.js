@@ -78,7 +78,7 @@ Spec.prototype.githubMarkdown = function () {
         } else if (isLastLink(i)) {
           text += '## [&#9664;](' + getPreviousLink(i) + ')&nbsp;[&#8984;](#table-of-contents)) &nbsp;' + node.text;
         } else {
-          text += '## [&#9664;](' + getPreviousLink(i) + ')&nbsp;[&#8984;](#table-of-contents)&nbsp;[&#9654;](' + getNextLink(i) + ') &nbsp;' + node.text;
+          text += '## [&#9664;](' + getPreviousLink(i) + ')&nbsp;[&#8984;](#table-of-contents)&nbsp;[&#9654;](' + getNextLink(i) + '&nbsp;' + node.text;
         }
         break;
       case 'h':
