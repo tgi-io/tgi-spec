@@ -130,7 +130,7 @@ Spec.prototype.githubMarkdown = function () {
         text += '\n- [' + node.text + '](' + '#-' + textToAnchor(node.text) + ') ' + node.description;
       }
     }
-    return text + '\n\n';
+    return text + '\n\npeace\n';
 
   }
 
