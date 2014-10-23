@@ -16,9 +16,6 @@ There be dragons!
 
 peace
 
-There be dragons!    
-
-Spec    
 
 ## [&#9664;](#-intro)&nbsp;[&#8984;](#table-of-contents)&nbsp;[&#9654;](#-illiad-book-1) &nbsp;Spec Constructor Function
 #### TGI SPEC
@@ -283,7 +280,6 @@ I got 99 problems and this is #98
 
 I got 99 problems and this is #99    
 
-Homer    
 
 ## [&#9664;](#-spec-constructor-function)&nbsp;[&#8984;](#table-of-contents)&nbsp;[&#9654;](#-illiad-book-2) &nbsp;Illiad Book 1
 Sing, O goddess, the anger of Achilles son of Peleus, that brought countless ills upon the Achaeans.     
@@ -291,7 +287,6 @@ Sing, O goddess, the anger of Achilles son of Peleus, that brought countless ill
 ## [&#9664;](#-illiad-book-1)&nbsp;[&#8984;](#table-of-contents)&nbsp;[&#9654;](#-summary) &nbsp;Illiad Book 2
 Now the other gods and the armed warriors on the plain slept soundly, but Jove was wakeful, for he was thinking how to do honour to Achilles, and destroyed much people at the ships of the Achaeans.    
 
-The End    
 
 ## [&#9664;](#-illiad-book-2)&nbsp;[&#8984;](#table-of-contents) &nbsp;Summary
 This documentation generated with https://github.com/tgicloud/tgi-spec.<br>TODO put testin stats here.    

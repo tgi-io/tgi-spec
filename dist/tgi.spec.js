@@ -104,10 +104,10 @@ Spec.prototype.githubMarkdown = function () {
       case 'e':
         text += codeBlock();
         break;
-      default:
       case 'p':
         text += node.text + '    \n';
         break;
+      default:
     }
   }
   return text;
