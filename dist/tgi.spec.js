@@ -430,6 +430,8 @@ Spec.prototype.example = function (text, results, testFunction) {
   this.nodes.push(node);
   return node;
 };
+Spec.prototype.xexample = function () { // for disabling
+};
 /**
  * Create index / TOC
  */

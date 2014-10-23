@@ -11,8 +11,6 @@ There be dragons!
 - [Illiad Book 1](#-illiad-book-1) it is what it is
 - [Illiad Book 2](#-illiad-book-2) it is what it is
 
-#### The End
-
 
 
 ## [&#9664;](#-intro)&nbsp;[&#8984;](#table-of-contents)&nbsp;[&#9654;](#-illiad-book-1) &nbsp;Spec Constructor Function
@@ -27,7 +25,7 @@ heading test followed by optional function used for indenting structure.  The pr
 here is the best example: https://github.com/tgicloud/tgi-spec/blob/master/lib/tgi-spec.test.js#L24    
 
 #### example(text, results, testFunction)
-The example function provides a test description, expected outcome and funtion to invoke for test.    
+The example function provides a test description, expected outcome and function to invoke for test.  to disable a test spec.xexample is provided also.    
 
 &nbsp;<b><i>Code with no errors:</i></b>
 ```javascript
@@ -85,7 +83,6 @@ Sing, O goddess, the anger of Achilles son of Peleus, that brought countless ill
 
 ## [&#9664;](#-illiad-book-1)&nbsp;[&#8984;](#table-of-contents)&nbsp;[&#9654;](#-summary) &nbsp;Illiad Book 2
 Now the other gods and the armed warriors on the plain slept soundly, but Jove was wakeful, for he was thinking how to do honour to Achilles, and destroyed much people at the ships of the Achaeans.    
-
 
 ## [&#9664;](#-illiad-book-2)&nbsp;[&#8984;](#table-of-contents) &nbsp;Summary
 This documentation generated with https://github.com/tgicloud/tgi-spec.<br>TODO put testin stats here.    
