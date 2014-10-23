@@ -87,8 +87,7 @@ Spec.prototype.githubMarkdown = function () {
       text += '\n';
     switch (node.type) {
       case 't':
-        if (node.text == 'Summary') {
-        } else if (i === 0) {
+        if (i === 0) {
           text += '#' + node.text;
         } else if (isLastLink(i)) {
           text += '## [&#9664;](' + getPreviousLink(i) + ')&nbsp;[&#8984;](#table-of-contents) &nbsp;' + node.text;
@@ -128,7 +127,8 @@ Spec.prototype.githubMarkdown = function () {
         text += '\n\n#### ' + node.text;
       }
       if (node.type == 't') {
-        text += '\n- [' + node.text + '](' + '#-' + textToAnchor(node.text) + ') ' + node.description;
+        if (node.text != 'Summary')
+          text += '\n- [' + node.text + '](' + '#-' + textToAnchor(node.text) + ') ' + node.description;
       }
     }
     return text + '\n\n';

@@ -78,11 +78,11 @@ spec.test('lib/tgi-spec', 'Spec Constructor Function', 'it is what it is', funct
         //});
       });
     });
-    spec.heading('SPAM', function () {
-      for (var problems = 0; problems < 99; problems++) {
-        spec.paragraph('I got 99 problems and this is #' + (problems+1));
-      }
-    });
+    //spec.heading('SPAM', function () {
+    //  for (var problems = 0; problems < 99; problems++) {
+    //    spec.paragraph('I got 99 problems and this is #' + (problems+1));
+    //  }
+    //});
   });
 });
 /**
