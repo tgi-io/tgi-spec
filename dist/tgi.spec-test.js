@@ -14,15 +14,13 @@ var testSpec = function(spec) {
  */
 spec.test('lib/tgi-spec-intro', 'INTRO', '', function (callback) {
   spec.paragraph('There be dragons!');
-  spec.paragraph('This is the deal with "*".  *one* **two**');
-  spec.paragraph('This is the deal with "_".  _one_ __two__');
-  spec.paragraph('This is the deal with "-".  -one- --two--');
   spec.index();
 });
 
 /**
- * The Specz
+ * The Spec
  */
+spec.testSection('Spec','This is extraneous but needed to show than you can put text here with the testSection function.');
 spec.test('lib/tgi-spec', 'Spec Constructor Function', 'it is what it is', function (callback) {
   spec.heading('TGI SPEC', function () {
     spec.paragraph('Javascript test and spec documentation framework.');
@@ -90,6 +88,7 @@ spec.test('lib/tgi-spec', 'Spec Constructor Function', 'it is what it is', funct
 /**
  * Fake tests to show spec.TOC() in action
  */
+spec.testSection('Homer');
 spec.test('lib/tgi-spec-illiad-2', 'Illiad Book 1', 'it is what it is', function (callback) {
   var text = 'Sing, O goddess, the anger of Achilles son of Peleus, that brought countless ills upon the Achaeans. ';
   //for (var i = 0; i < 8; i++) {
@@ -100,6 +99,7 @@ spec.test('lib/tgi-spec-illiad-2', 'Illiad Book 1', 'it is what it is', function
 spec.test('lib/tgi-spec-illiad-2', 'Illiad Book 2', 'it is what it is', function (callback) {
   spec.paragraph('Now the other gods and the armed warriors on the plain slept soundly, but Jove was wakeful, for he was thinking how to do honour to Achilles, and destroyed much people at the ships of the Achaeans.');
 });
+spec.testSection('The End');
 
 /**---------------------------------------------------------------------------------------------------------------------
  * tgi-spec/lib/spec-footer

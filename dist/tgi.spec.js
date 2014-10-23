@@ -23,6 +23,13 @@ Spec.prototype.test = function (testSource, testName, testDescription, testScrip
     testScript: testScript
   });
 };
+Spec.prototype.testSection = function (sectionHeader, sectionText) {
+  this.scripts.push({
+    testSource: 'Section',
+    testName: sectionHeader,
+    testDescription: sectionText
+  });
+};
 Spec.prototype.runTests = function (callback) {
   var spec = this;
   var node;
@@ -31,12 +38,19 @@ Spec.prototype.runTests = function (callback) {
   for (var i = 0; i < spec.scripts.length; i++) {
     var script = spec.scripts[i];
     spec.testCallback({log: 'test script: ' + script.testName});
-    // create test node
-    node = new Spec.Node({type: 't'});
-    node.text = script.testName;
-    node.description = script.testDescription;
-    spec.nodes.push(node);
-    script.testScript(callback);
+    if (script.testSource == 'Section') {
+      node = new Spec.Node({type: 's'});
+      node.text = script.testName;
+      node.description = script.testDescription;
+      spec.nodes.push(node);
+
+    } else {
+      node = new Spec.Node({type: 't'});
+      node.text = script.testName;
+      node.description = script.testDescription;
+      spec.nodes.push(node);
+      script.testScript(callback);
+    }
   }
   // Push Summary of all tests
   node = new Spec.Node({type: 't'});
@@ -109,6 +123,9 @@ Spec.prototype.githubMarkdown = function () {
     // todo skips first test should be overridable
     for (i = 1; i < spec.nodes.length; i++) {
       var node = spec.nodes[i];
+      if (node.type == 's') {
+        text += '\n#### ' + node.text;
+      }
       if (node.type == 't') {
         text += '\n- [' + node.text + '](' + '#-' + textToAnchor(node.text) + ') ' + node.description;
       }
@@ -148,6 +165,7 @@ Spec.prototype.githubMarkdown = function () {
     }
     return '#';
   }
+
   function isLastLink(index) {
     var i;
     var lastLink;
@@ -242,14 +260,17 @@ Spec.prototype.githubMarkdown = function () {
 };
 /**
  * Spec.Node object for each piece of spec types as follows:
+ * s - section
+ * t - test module
  * h - heading
+ * i - index
  * p - paragraph
  * e - example (test)
  **/
 Spec.Node = function (args) {
   args = args || {};
   this.type = args.type || null;
-  if (!this.type || ((this.type != 't') && (this.type != 'h') && (this.type != 'i') && (this.type != 'p') && (this.type != 'e'))) {
+  if (!this.type || ((this.type != 's') && (this.type != 't') && (this.type != 'h') && (this.type != 'i') && (this.type != 'p') && (this.type != 'e'))) {
     throw new Error('Spec.Node type must be t, h, i, p or e');
   }
 };
@@ -330,11 +351,6 @@ Spec.Test.prototype.shouldBeFalse = function (expression) {
   if (expression !== false)
     this.assertionsFailed++;
 };
-//Spec.Test.prototype.shouldBeTruthy = function (expression) {
-//  this.assertionsMade++;
-//  if (expression != true) // jshint ignore:line
-//    this.assertionsFailed++;
-//};
 Spec.Test.prototype.shouldBeTruthy = function (expression) {
   this.assertionsMade++;
   if (!expression)
