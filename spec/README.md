@@ -287,5 +287,5 @@ Sing, O goddess, the anger of Achilles son of Peleus, that brought countless ill
 Now the other gods and the armed warriors on the plain slept soundly, but Jove was wakeful, for he was thinking how to do honour to Achilles, and destroyed much people at the ships of the Achaeans.    
 
 
-## [&#9664;](#-illiad-book-2)&nbsp;[&#8984;](#table-of-contents) &nbsp;Summary
+
 This documentation generated with https://github.com/tgicloud/tgi-spec.<br>TODO put testin stats here.    
