@@ -3,11 +3,14 @@ There be dragons!
 
 ###Table of Contents
 
+
 #### Spec
 - [Spec Constructor Function](#-spec-constructor-function) it is what it is
+
 #### Homer
 - [Illiad Book 1](#-illiad-book-1) it is what it is
 - [Illiad Book 2](#-illiad-book-2) it is what it is
+
 #### The End
 - [Summary](#-summary) for this spec.
 

@@ -124,7 +124,7 @@ Spec.prototype.githubMarkdown = function () {
     for (i = 1; i < spec.nodes.length; i++) {
       var node = spec.nodes[i];
       if (node.type == 's') {
-        text += '\n#### ' + node.text;
+        text += '\n\n#### ' + node.text;
       }
       if (node.type == 't') {
         text += '\n- [' + node.text + '](' + '#-' + textToAnchor(node.text) + ') ' + node.description;
