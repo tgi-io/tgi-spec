@@ -87,6 +87,12 @@ this.log(JSON.stringify(mutedTests));
 return mutedTests.testsCreated;
 ```
 <blockquote><strong>log: </strong>{"testsCreated":0}<br></blockquote>
+with muted tests...    
+
+&nbsp;<b><i>mute enabled:</i></b>
+```javascript
+spec.mute(true);
+```
 
 ## [&#9664;](#-spec-constructor-function)&nbsp;[&#8984;](#table-of-contents)&nbsp;[&#9654;](#-illiad-book-2) &nbsp;Illiad Book 1
 Sing, O goddess, the anger of Achilles son of Peleus, that brought countless ills upon the Achaeans.     

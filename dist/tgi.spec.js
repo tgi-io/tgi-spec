@@ -14,6 +14,7 @@ var Spec = function () {
   spec.testsCreated = 0;
   spec.testsPending = 0;
   spec.testsFailed = 0;
+  spec.muted = false;
 };
 Spec.prototype.test = function (testSource, testName, testDescription, testScript) {
   this.scripts.push({
@@ -40,12 +41,14 @@ Spec.prototype.runTests = function (callback) {
     spec.testCallback({log: 'test script: ' + script.testName});
     if (script.testSource == 'Section') {
       node = new Spec.Node({type: 's'});
+      node.muted = spec.muted;
       node.text = script.testName;
       node.description = script.testDescription;
       spec.nodes.push(node);
 
     } else {
       node = new Spec.Node({type: 't'});
+      node.muted = spec.muted;
       node.text = script.testName;
       node.description = script.testDescription;
       spec.nodes.push(node);
@@ -54,6 +57,7 @@ Spec.prototype.runTests = function (callback) {
   }
   // Push Summary of all tests
   node = new Spec.Node({type: 't'});
+  node.muted = spec.muted;
   node.text = 'Summary';
   node.description = 'for this spec.';
   spec.nodes.push(node);
@@ -83,31 +87,33 @@ Spec.prototype.githubMarkdown = function () {
   var i;
   for (i = 0; i < spec.nodes.length; i++) {
     var node = spec.nodes[i];
-    if (i)
-      text += '\n';
-    switch (node.type) {
-      case 't':
-        if (i === 0) {
-          text += '#' + node.text;
-        } else if (isLastLink(i)) {
-          text += '## [&#9664;](' + getPreviousLink(i) + ')&nbsp;[&#8984;](#table-of-contents) &nbsp;' + node.text;
-        } else {
-          text += '## [&#9664;](' + getPreviousLink(i) + ')&nbsp;[&#8984;](#table-of-contents)&nbsp;[&#9654;](' + getNextLink(i) + ') &nbsp;' + node.text;
-        }
-        break;
-      case 'h':
-        text += '#### ' + node.text;
-        break;
-      case 'i':
-        text += generateTOC();
-        break;
-      case 'e':
-        text += codeBlock();
-        break;
-      case 'p':
-        text += node.text + '    \n';
-        break;
-      default:
+    if (!node.muted) {
+      if (i)
+        text += '\n';
+      switch (node.type) {
+        case 't':
+          if (i === 0) {
+            text += '#' + node.text;
+          } else if (isLastLink(i)) {
+            text += '## [&#9664;](' + getPreviousLink(i) + ')&nbsp;[&#8984;](#table-of-contents) &nbsp;' + node.text;
+          } else {
+            text += '## [&#9664;](' + getPreviousLink(i) + ')&nbsp;[&#8984;](#table-of-contents)&nbsp;[&#9654;](' + getNextLink(i) + ') &nbsp;' + node.text;
+          }
+          break;
+        case 'h':
+          text += '#### ' + node.text;
+          break;
+        case 'i':
+          text += generateTOC();
+          break;
+        case 'e':
+          text += codeBlock();
+          break;
+        case 'p':
+          text += node.text + '    \n';
+          break;
+        default:
+      }
     }
   }
   return text;
@@ -393,6 +399,7 @@ Spec.prototype.heading = function (text, func) {
   }
   spec.testCallback({log: 'heading: ' + text});
   var node = new Spec.Node({type: 'h'});
+  node.muted = spec.muted;
   node.text = text;
   this.nodes.push(node);
   if (func) func();
@@ -408,6 +415,7 @@ Spec.prototype.paragraph = function (text) {
   }
   spec.testCallback({log: 'paragraph: ' + text});
   var node = new Spec.Node({type: 'p'});
+  node.muted = spec.muted;
   node.text = text;
   this.nodes.push(node);
   return node;
@@ -425,6 +433,7 @@ Spec.prototype.example = function (text, results, testFunction) {
     throw new Error('Spec.example 3rd arg is function code or undefined');
   }
   var node = new Spec.Node({type: 'e'});
+  node.muted = spec.muted;
   node.text = text;
   node.test = new Spec.Test(this, results, testFunction);
   this.nodes.push(node);
@@ -436,8 +445,10 @@ Spec.prototype.xexample = function () { // for disabling
  * Create index / TOC
  */
 Spec.prototype.index = function () {
+  var spec = this;
   var node = new Spec.Node({type: 'i'});
-  this.nodes.push(node);
+  node.muted = spec.muted;
+  spec.nodes.push(node);
   return node;
 };
 /**
@@ -450,6 +461,12 @@ Spec.prototype.asyncResults = function (arg) {
  * Mute / unmute tests
  **/
 Spec.prototype.mute = function (arg) {
+  var spec = this;
+  if (arg) {
+    spec.muted = true;
+  } else {
+    spec.muted = false;
+  }
   return {testsCreated:0};
 };
 
