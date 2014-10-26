@@ -15,6 +15,7 @@ var Spec = function () {
   spec.testsPending = 0;
   spec.testsFailed = 0;
   spec.muted = false;
+  spec.mutedTestsCreated = 0;
 };
 Spec.prototype.test = function (testSource, testName, testDescription, testScript) {
   this.scripts.push({
@@ -434,6 +435,7 @@ Spec.prototype.example = function (text, results, testFunction) {
   }
   var node = new Spec.Node({type: 'e'});
   node.muted = spec.muted;
+  if (spec.muted) spec.mutedTestsCreated++;
   node.text = text;
   node.test = new Spec.Test(this, results, testFunction);
   this.nodes.push(node);
@@ -463,11 +465,12 @@ Spec.prototype.asyncResults = function (arg) {
 Spec.prototype.mute = function (arg) {
   var spec = this;
   if (arg) {
+    spec.mutedTestsCreated = 0;
     spec.muted = true;
   } else {
     spec.muted = false;
   }
-  return {testsCreated:0};
+  return {testsCreated: spec.mutedTestsCreated};
 };
 
 /**---------------------------------------------------------------------------------------------------------------------

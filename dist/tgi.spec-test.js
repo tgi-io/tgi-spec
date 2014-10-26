@@ -98,13 +98,11 @@ spec.test('lib/tgi-spec', 'Spec Constructor Function', 'it is what it is', funct
             // 1 passed test ....
           });
         });
-        spec.example('mute disabled', 0, function () {
-          var mutedTests = spec.mute(false);
-          this.log(JSON.stringify(mutedTests));
-          return mutedTests.testsCreated;
+        var wasMuted = spec.mute(false).testsCreated;
+        spec.example('should have 1 muted test now', 1, function () {
+          // See source for skipped parts
+          return wasMuted;
         });
-
-
       });
 
 

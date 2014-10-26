@@ -93,6 +93,13 @@ with muted tests...
 ```javascript
 spec.mute(true);
 ```
+&nbsp;<b><i>should have 1 muted test now:</i></b>
+```javascript
+// See source for skipped parts
+return wasMuted;
+```
+<blockquote>returns <strong>1</strong> as expected
+</blockquote>
 
 ## [&#9664;](#-spec-constructor-function)&nbsp;[&#8984;](#table-of-contents)&nbsp;[&#9654;](#-illiad-book-2) &nbsp;Illiad Book 1
 Sing, O goddess, the anger of Achilles son of Peleus, that brought countless ills upon the Achaeans.     
