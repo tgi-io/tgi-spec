@@ -77,6 +77,16 @@ this.shouldThrowError(Error('fubar'), function () {
 this.log('ponder the meaning of life: ' + 42 * 10);
 ```
 <blockquote><strong>log: </strong>ponder the meaning of life: 420<br></blockquote>
+#### mute(true/false)
+Tests can be muted and unmuted.  All documentation will be muted but tests will be run.  Return value is object with stats of run tests.    
+
+&nbsp;<b><i>check function and return value:</i></b>
+```javascript
+var mutedTests = spec.mute(false);
+this.log(JSON.stringify(mutedTests));
+return mutedTests.testsCreated;
+```
+<blockquote><strong>log: </strong>{"testsCreated":0}<br></blockquote>
 
 ## [&#9664;](#-spec-constructor-function)&nbsp;[&#8984;](#table-of-contents)&nbsp;[&#9654;](#-illiad-book-2) &nbsp;Illiad Book 1
 Sing, O goddess, the anger of Achilles son of Peleus, that brought countless ills upon the Achaeans.     

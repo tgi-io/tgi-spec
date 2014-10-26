@@ -446,6 +446,12 @@ Spec.prototype.index = function () {
 Spec.prototype.asyncResults = function (arg) {
   return {async: true, expectedValue: arg};
 };
+/**
+ * Mute / unmute tests
+ **/
+Spec.prototype.mute = function (arg) {
+  return {testsCreated:0};
+};
 
 /**---------------------------------------------------------------------------------------------------------------------
  * tgi-spec/lib/footer
