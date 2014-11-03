@@ -78,7 +78,7 @@ this.log('ponder the meaning of life: ' + 42 * 10);
 ```
 <blockquote><strong>log: </strong>ponder the meaning of life: 420<br></blockquote>
 #### mute(true/false)
-Tests can be muted and unmuted.  All documentation will be muted but tests will be run.  Return value is object with stats of run tests.    
+Tests can be muted.  All documentation will be muted but tests will be run.  Return value is object with stats of run tests.    
 
 &nbsp;<b><i>check function and return value:</i></b>
 ```javascript
@@ -87,8 +87,6 @@ this.log(JSON.stringify(mutedTests));
 return mutedTests.testsCreated;
 ```
 <blockquote><strong>log: </strong>{"testsCreated":0}<br></blockquote>
-with muted tests...    
-
 &nbsp;<b><i>mute enabled:</i></b>
 ```javascript
 spec.mute(true);
