@@ -16,6 +16,7 @@ var Spec = function () {
   spec.testsFailed = 0;
   spec.muted = false;
   spec.mutedTestsCreated = 0;
+  spec.muteCount = 0;
 };
 Spec.prototype.test = function (testSource, testName, testDescription, testScript) {
   this.scripts.push({
@@ -465,10 +466,15 @@ Spec.prototype.asyncResults = function (arg) {
 Spec.prototype.mute = function (arg) {
   var spec = this;
   if (arg) {
-    spec.mutedTestsCreated = 0;
+    if (!spec.muteCount)
+      spec.mutedTestsCreated = 0;
     spec.muted = true;
+    spec.muteCount++;
   } else {
-    spec.muted = false;
+    if (spec.muteCount>0)
+      spec.muteCount--;
+    if (!spec.muteCount)
+      spec.muted = false;
   }
   return {testsCreated: spec.mutedTestsCreated};
 };
