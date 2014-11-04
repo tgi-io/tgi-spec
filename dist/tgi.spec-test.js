@@ -12,6 +12,7 @@ var testSpec = function(spec) {
 /**
  * Doc Intro
  */
+spec.mute(true);
 spec.test('lib/tgi-spec-intro', 'INTRO', '', function (callback) {
   spec.paragraph('There be dragons!');
   spec.index();
@@ -81,7 +82,7 @@ spec.test('lib/tgi-spec', 'Spec Constructor Function', 'it is what it is', funct
 
       spec.heading('mute(true/false)', function () {
         spec.paragraph('Tests can be muted.  All documentation will be muted but tests will be run.  Return value is object with stats of run tests.');
-        spec.example('check function and return value', 0, function () {
+        spec.example('check function and return value', 8, function () {
           var mutedTests = spec.mute(false);
           this.log(JSON.stringify(mutedTests));
           return mutedTests.testsCreated;
