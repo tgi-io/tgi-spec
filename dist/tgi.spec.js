@@ -286,7 +286,7 @@ Spec.Node = function (args) {
 /**
  * Spec.Test for each example
  */
-Spec.Test = function (spec, expectedValue, testFunction) {
+Spec.Test = function (spec, expectedValue, testFunction, example) {
   var test = this;
   var testExpectedValue;
   var testReturnValue;
@@ -306,12 +306,12 @@ Spec.Test = function (spec, expectedValue, testFunction) {
         if (test.expectedValue.expectedValue != callbackReturns) {
           spec.testsFailed++;
           test.testFailed = true;
-          spec.testCallback({error: 'callback return value incorrect: "' + callbackReturns + '" expected "' + test.expectedValue.expectedValue + '"'});
+          spec.testCallback({error: 'ex. "' + example + '": ' + 'callback return value incorrect: "' + callbackReturns + '" expected "' + test.expectedValue.expectedValue + '"'});
         }
       } else if (test.assertionsFailed) {
         spec.testsFailed++;
         test.testFailed = true;
-        spec.testCallback({error: 'assertions failed: ' + testReturnValue});
+        spec.testCallback({error: 'ex. "' + example + '": ' + 'assertions failed: ' + testReturnValue});
       }
     });
     testReturnValue = returnValue instanceof Error ? returnValue.toString() : returnValue;
@@ -323,17 +323,17 @@ Spec.Test = function (spec, expectedValue, testFunction) {
         if (testExpectedValue != testReturnValue) {
           spec.testsFailed++;
           test.testFailed = true;
-          spec.testCallback({error: 'return value incorrect: "' + testReturnValue + '" expected "' + testExpectedValue + '"'});
+          spec.testCallback({error: 'ex. "' + example + '": ' + 'return value incorrect: "' + testReturnValue + '" expected "' + testExpectedValue + '"'});
         } else if (test.assertionsFailed) {
           spec.testsFailed++;
           test.testFailed = true;
-          spec.testCallback({error: 'assertions failed: ' + testReturnValue});
+          spec.testCallback({error: 'ex. "' + example + '": ' + 'assertions failed: ' + testReturnValue});
         }
       }
     } else if (test.assertionsFailed) {
       spec.testsFailed++;
       test.testFailed = true;
-      spec.testCallback({error: 'assertions failed: ' + testReturnValue});
+      spec.testCallback({error: 'ex. "' + example + '": ' + 'assertions failed: ' + testReturnValue});
     }
   } catch (e) {
     test.testThrown = true;
@@ -341,7 +341,7 @@ Spec.Test = function (spec, expectedValue, testFunction) {
     if (typeof expectedValue === 'undefined' || !(expectedValue instanceof Error) || e.toString() !== expectedValue.toString()) {
       spec.testsFailed++;
       test.testFailed = true;
-      spec.testCallback({error: 'error thrown: ' + e});
+      spec.testCallback({error: 'ex. "' + example + '": ' + 'error thrown: ' + e});
     }
   }
   if (!test.testAsync)
@@ -438,7 +438,7 @@ Spec.prototype.example = function (text, results, testFunction) {
   node.muted = spec.muted;
   if (spec.muted) spec.mutedTestsCreated++;
   node.text = text;
-  node.test = new Spec.Test(this, results, testFunction);
+  node.test = new Spec.Test(this, results, testFunction, text);
   this.nodes.push(node);
   return node;
 };
@@ -471,7 +471,7 @@ Spec.prototype.mute = function (arg) {
     spec.muted = true;
     spec.muteCount++;
   } else {
-    if (spec.muteCount>0)
+    if (spec.muteCount > 0)
       spec.muteCount--;
     if (!spec.muteCount)
       spec.muted = false;
