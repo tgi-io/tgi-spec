@@ -40,7 +40,7 @@ Spec.prototype.runTests = function (callback) {
   // Load the scripts
   for (var i = 0; i < spec.scripts.length; i++) {
     var script = spec.scripts[i];
-    spec.testCallback({log: 'test script: ' + script.testName});
+    spec.testCallback({log: 'test script: ' + script.testName + (spec.muted ? ' (MUTED)' : '')});
     if (script.testSource == 'Section') {
       node = new Spec.Node({type: 's'});
       node.muted = spec.muted;
@@ -399,7 +399,7 @@ Spec.prototype.heading = function (text, func) {
   if (typeof text !== 'string' || text === '') {
     throw new Error('Spec.heading requires text argument');
   }
-  spec.testCallback({log: 'heading: ' + text});
+  spec.testCallback({log: 'heading: ' + text + (spec.muted ? ' (MUTED)' : '')});
   var node = new Spec.Node({type: 'h'});
   node.muted = spec.muted;
   node.text = text;
@@ -415,7 +415,7 @@ Spec.prototype.paragraph = function (text) {
   if (typeof text !== 'string' || text === '') {
     throw new Error('Spec.paragraph requires text argument');
   }
-  spec.testCallback({log: 'paragraph: ' + text});
+  spec.testCallback({log: 'paragraph: ' + text + (spec.muted ? ' (MUTED)' : '')});
   var node = new Spec.Node({type: 'p'});
   node.muted = spec.muted;
   node.text = text;
@@ -430,7 +430,7 @@ Spec.prototype.example = function (text, results, testFunction) {
   if (typeof text !== 'string' || text === '') {
     throw new Error('Spec.example requires text argument');
   }
-  spec.testCallback({log: 'example: ' + text});
+  spec.testCallback({log: 'example: ' + text + (spec.muted ? ' (MUTED)' : '')});
   if (typeof testFunction !== 'function') {
     throw new Error('Spec.example 3rd arg is function code or undefined');
   }
@@ -464,6 +464,7 @@ Spec.prototype.asyncResults = function (arg) {
  * Mute / unmute tests
  **/
 Spec.prototype.mute = function (arg) {
+
   var spec = this;
   if (arg) {
     if (!spec.muteCount)
@@ -476,6 +477,11 @@ Spec.prototype.mute = function (arg) {
     if (!spec.muteCount)
       spec.muted = false;
   }
+  if (spec.testCallback)
+    spec.testCallback({log: 'MUTE ' + (arg ? 'ON' : 'OFF') + ' COUNT ' + spec.muteCount});
+  else
+    console.log('*** MUTE '+ (arg ? 'ON' : 'OFF') + ' ***');
+
   return {testsCreated: spec.mutedTestsCreated};
 };
 
