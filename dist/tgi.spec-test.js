@@ -107,11 +107,11 @@ spec.test('lib/tgi-spec', 'Spec Constructor Function', 'it is what it is', funct
       });
     });
   });
-  //spec.heading('SPAM', function () {
-  //  for (var problems = 0; problems < 99; problems++) {
-  //    spec.paragraph('I got 99 problems and this is #' + (problems+1));
-  //  }
-  //});
+  spec.heading('SPAM', function () {
+    for (var problems = 0; problems < 99; problems++) {
+      spec.paragraph('I got 99 problems and this is #' + (problems+1));
+    }
+  });
 });
 /**
  * Fake tests to show spec.TOC() in action
@@ -119,9 +119,9 @@ spec.test('lib/tgi-spec', 'Spec Constructor Function', 'it is what it is', funct
 spec.testSection('Homer');
 spec.test('lib/tgi-spec-illiad-2', 'Illiad Book 1', 'it is what it is', function (callback) {
   var text = 'Sing, O goddess, the anger of Achilles son of Peleus, that brought countless ills upon the Achaeans. ';
-  //for (var i = 0; i < 8; i++) {
-  //  text += text;
-  //}
+  for (var i = 0; i < 8; i++) {
+    text += text;
+  }
   spec.paragraph(text);
 });
 spec.test('lib/tgi-spec-illiad-2', 'Illiad Book 2', 'it is what it is', function (callback) {

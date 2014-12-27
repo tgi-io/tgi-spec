@@ -97,9 +97,208 @@ return wasMuted;
 ```
 <blockquote>returns <strong>2</strong> as expected
 </blockquote>
+#### SPAM
+I got 99 problems and this is #1    
+
+I got 99 problems and this is #2    
+
+I got 99 problems and this is #3    
+
+I got 99 problems and this is #4    
+
+I got 99 problems and this is #5    
+
+I got 99 problems and this is #6    
+
+I got 99 problems and this is #7    
+
+I got 99 problems and this is #8    
+
+I got 99 problems and this is #9    
+
+I got 99 problems and this is #10    
+
+I got 99 problems and this is #11    
+
+I got 99 problems and this is #12    
+
+I got 99 problems and this is #13    
+
+I got 99 problems and this is #14    
+
+I got 99 problems and this is #15    
+
+I got 99 problems and this is #16    
+
+I got 99 problems and this is #17    
+
+I got 99 problems and this is #18    
+
+I got 99 problems and this is #19    
+
+I got 99 problems and this is #20    
+
+I got 99 problems and this is #21    
+
+I got 99 problems and this is #22    
+
+I got 99 problems and this is #23    
+
+I got 99 problems and this is #24    
+
+I got 99 problems and this is #25    
+
+I got 99 problems and this is #26    
+
+I got 99 problems and this is #27    
+
+I got 99 problems and this is #28    
+
+I got 99 problems and this is #29    
+
+I got 99 problems and this is #30    
+
+I got 99 problems and this is #31    
+
+I got 99 problems and this is #32    
+
+I got 99 problems and this is #33    
+
+I got 99 problems and this is #34    
+
+I got 99 problems and this is #35    
+
+I got 99 problems and this is #36    
+
+I got 99 problems and this is #37    
+
+I got 99 problems and this is #38    
+
+I got 99 problems and this is #39    
+
+I got 99 problems and this is #40    
+
+I got 99 problems and this is #41    
+
+I got 99 problems and this is #42    
+
+I got 99 problems and this is #43    
+
+I got 99 problems and this is #44    
+
+I got 99 problems and this is #45    
+
+I got 99 problems and this is #46    
+
+I got 99 problems and this is #47    
+
+I got 99 problems and this is #48    
+
+I got 99 problems and this is #49    
+
+I got 99 problems and this is #50    
+
+I got 99 problems and this is #51    
+
+I got 99 problems and this is #52    
+
+I got 99 problems and this is #53    
+
+I got 99 problems and this is #54    
+
+I got 99 problems and this is #55    
+
+I got 99 problems and this is #56    
+
+I got 99 problems and this is #57    
+
+I got 99 problems and this is #58    
+
+I got 99 problems and this is #59    
+
+I got 99 problems and this is #60    
+
+I got 99 problems and this is #61    
+
+I got 99 problems and this is #62    
+
+I got 99 problems and this is #63    
+
+I got 99 problems and this is #64    
+
+I got 99 problems and this is #65    
+
+I got 99 problems and this is #66    
+
+I got 99 problems and this is #67    
+
+I got 99 problems and this is #68    
+
+I got 99 problems and this is #69    
+
+I got 99 problems and this is #70    
+
+I got 99 problems and this is #71    
+
+I got 99 problems and this is #72    
+
+I got 99 problems and this is #73    
+
+I got 99 problems and this is #74    
+
+I got 99 problems and this is #75    
+
+I got 99 problems and this is #76    
+
+I got 99 problems and this is #77    
+
+I got 99 problems and this is #78    
+
+I got 99 problems and this is #79    
+
+I got 99 problems and this is #80    
+
+I got 99 problems and this is #81    
+
+I got 99 problems and this is #82    
+
+I got 99 problems and this is #83    
+
+I got 99 problems and this is #84    
+
+I got 99 problems and this is #85    
+
+I got 99 problems and this is #86    
+
+I got 99 problems and this is #87    
+
+I got 99 problems and this is #88    
+
+I got 99 problems and this is #89    
+
+I got 99 problems and this is #90    
+
+I got 99 problems and this is #91    
+
+I got 99 problems and this is #92    
+
+I got 99 problems and this is #93    
+
+I got 99 problems and this is #94    
+
+I got 99 problems and this is #95    
+
+I got 99 problems and this is #96    
+
+I got 99 problems and this is #97    
+
+I got 99 problems and this is #98    
+
+I got 99 problems and this is #99    
+
 
 ## [&#9664;](#-spec-constructor-function)&nbsp;[&#8984;](#table-of-contents)&nbsp;[&#9654;](#-illiad-book-2) &nbsp;Illiad Book 1
-Sing, O goddess, the anger of Achilles son of Peleus, that brought countless ills upon the Achaeans.     
+Sing, O goddess, the anger of Achilles son of Peleus, that brought countless ills upon the Achaeans. Sing, O goddess, the anger of Achilles son of Peleus, that brought countless ills upon the Achaeans. Sing, O goddess, the anger of Achilles son of Peleus, that brought countless ills upon the Achaeans. Sing, O goddess, the anger of Achilles son of Peleus, that brought countless ills upon the Achaeans. Sing, O goddess, the anger of Achilles son of Peleus, that brought countless ills upon the Achaeans. Sing, O goddess, the anger of Achilles son of Peleus, that brought countless ills upon the Achaeans. Sing, O goddess, the anger of Achilles son of Peleus, that brought countless ills upon the Achaeans. Sing, O goddess, the anger of Achilles son of Peleus, that brought countless ills upon the Achaeans. Sing, O goddess, the anger of Achilles son of Peleus, that brought countless ills upon the Achaeans. Sing, O goddess, the anger of Achilles son of Peleus, that brought countless ills upon the Achaeans. Sing, O goddess, the anger of Achilles son of Peleus, that brought countless ills upon the Achaeans. Sing, O goddess, the anger of Achilles son of Peleus, that brought countless ills upon the Achaeans. Sing, O goddess, the anger of Achilles son of Peleus, that brought countless ills upon the Achaeans. Sing, O goddess, the anger of Achilles son of Peleus, that brought countless ills upon the Achaeans. Sing, O goddess, the anger of Achilles son of Peleus, that brought countless ills upon the Achaeans. Sing, O goddess, the anger of Achilles son of Peleus, that brought countless ills upon the Achaeans. Sing, O goddess, the anger of Achilles son of Peleus, that brought countless ills upon the Achaeans. Sing, O goddess, the anger of Achilles son of Peleus, that brought countless ills upon the Achaeans. Sing, O goddess, the anger of Achilles son of Peleus, that brought countless ills upon the Achaeans. Sing, O goddess, the anger of Achilles son of Peleus, that brought countless ills upon the Achaeans. Sing, O goddess, the anger of Achilles son of Peleus, that brought countless ills upon the Achaeans. Sing, O goddess, the anger of Achilles son of Peleus, that brought countless ills upon the Achaeans. Sing, O goddess, the anger of Achilles son of Peleus, that brought countless ills upon the Achaeans. Sing, O goddess, the anger of Achilles son of Peleus, that brought countless ills upon the Achaeans. Sing, O goddess, the anger of Achilles son of Peleus, that brought countless ills upon the Achaeans. Sing, O goddess, the anger of Achilles son of Peleus, that brought countless ills upon the Achaeans. Sing, O goddess, the anger of Achilles son of Peleus, that brought countless ills upon the Achaeans. Sing, O goddess, the anger of Achilles son of Peleus, that brought countless ills upon the Achaeans. Sing, O goddess, the anger of Achilles son of Peleus, that brought countless ills upon the Achaeans. Sing, O goddess, the anger of Achilles son of Peleus, that brought countless ills upon the Achaeans. Sing, O goddess, the anger of Achilles son of Peleus, that brought countless ills upon the Achaeans. Sing, O goddess, the anger of Achilles son of Peleus, that brought countless ills upon the Achaeans. Sing, O goddess, the anger of Achilles son of Peleus, that brought countless ills upon the Achaeans. Sing, O goddess, the anger of Achilles son of Peleus, that brought countless ills upon the Achaeans. Sing, O goddess, the anger of Achilles son of Peleus, that brought countless ills upon the Achaeans. Sing, O goddess, the anger of Achilles son of Peleus, that brought countless ills upon the Achaeans. Sing, O goddess, the anger of Achilles son of Peleus, that brought countless ills upon the Achaeans. Sing, O goddess, the anger of Achilles son of Peleus, that brought countless ills upon the Achaeans. Sing, O goddess, the anger of Achilles son of Peleus, that brought countless ills upon the Achaeans. Sing, O goddess, the anger of Achilles son of Peleus, that brought countless ills upon the Achaeans. Sing, O goddess, the anger of Achilles son of Peleus, that brought countless ills upon the Achaeans. Sing, O goddess, the anger of Achilles son of Peleus, that brought countless ills upon the Achaeans. Sing, O goddess, the anger of Achilles son of Peleus, that brought countless ills upon the Achaeans. Sing, O goddess, the anger of Achilles son of Peleus, that brought countless ills upon the Achaeans. Sing, O goddess, the anger of Achilles son of Peleus, that brought countless ills upon the Achaeans. Sing, O goddess, the anger of Achilles son of Peleus, that brought countless ills upon the Achaeans. Sing, O goddess, the anger of Achilles son of Peleus, that brought countless ills upon the Achaeans. Sing, O goddess, the anger of Achilles son of Peleus, that brought countless ills upon the Achaeans. Sing, O goddess, the anger of Achilles son of Peleus, that brought countless ills upon the Achaeans. Sing, O goddess, the anger of Achilles son of Peleus, that brought countless ills upon the Achaeans. Sing, O goddess, the anger of Achilles son of Peleus, that brought countless ills upon the Achaeans. Sing, O goddess, the anger of Achilles son of Peleus, that brought countless ills upon the Achaeans. Sing, O goddess, the anger of Achilles son of Peleus, that brought countless ills upon the Achaeans. Sing, O goddess, the anger of Achilles son of Peleus, that brought countless ills upon the Achaeans. Sing, O goddess, the anger of Achilles son of Peleus, that brought countless ills upon the Achaeans. Sing, O goddess, the anger of Achilles son of Peleus, that brought countless ills upon the Achaeans. Sing, O goddess, the anger of Achilles son of Peleus, that brought countless ills upon the Achaeans. Sing, O goddess, the anger of Achilles son of Peleus, that brought countless ills upon the Achaeans. Sing, O goddess, the anger of Achilles son of Peleus, that brought countless ills upon the Achaeans. Sing, O goddess, the anger of Achilles son of Peleus, that brought countless ills upon the Achaeans. Sing, O goddess, the anger of Achilles son of Peleus, that brought countless ills upon the Achaeans. Sing, O goddess, the anger of Achilles son of Peleus, that brought countless ills upon the Achaeans. Sing, O goddess, the anger of Achilles son of Peleus, that brought countless ills upon the Achaeans. Sing, O goddess, the anger of Achilles son of Peleus, that brought countless ills upon the Achaeans. Sing, O goddess, the anger of Achilles son of Peleus, that brought countless ills upon the Achaeans. Sing, O goddess, the anger of Achilles son of Peleus, that brought countless ills upon the Achaeans. Sing, O goddess, the anger of Achilles son of Peleus, that brought countless ills upon the Achaeans. Sing, O goddess, the anger of Achilles son of Peleus, that brought countless ills upon the Achaeans. Sing, O goddess, the anger of Achilles son of Peleus, that brought countless ills upon the Achaeans. Sing, O goddess, the anger of Achilles son of Peleus, that brought countless ills upon the Achaeans. Sing, O goddess, the anger of Achilles son of Peleus, that brought countless ills upon the Achaeans. Sing, O goddess, the anger of Achilles son of Peleus, that brought countless ills upon the Achaeans. Sing, O goddess, the anger of Achilles son of Peleus, that brought countless ills upon the Achaeans. Sing, O goddess, the anger of Achilles son of Peleus, that brought countless ills upon the Achaeans. Sing, O goddess, the anger of Achilles son of Peleus, that brought countless ills upon the Achaeans. Sing, O goddess, the anger of Achilles son of Peleus, that brought countless ills upon the Achaeans. Sing, O goddess, the anger of Achilles son of Peleus, that brought countless ills upon the Achaeans. Sing, O goddess, the anger of Achilles son of Peleus, that brought countless ills upon the Achaeans. Sing, O goddess, the anger of Achilles son of Peleus, that brought countless ills upon the Achaeans. Sing, O goddess, the anger of Achilles son of Peleus, that brought countless ills upon the Achaeans. Sing, O goddess, the anger of Achilles son of Peleus, that brought countless ills upon the Achaeans. Sing, O goddess, the anger of Achilles son of Peleus, that brought countless ills upon the Achaeans. Sing, O goddess, the anger of Achilles son of Peleus, that brought countless ills upon the Achaeans. Sing, O goddess, the anger of Achilles son of Peleus, that brought countless ills upon the Achaeans. Sing, O goddess, the anger of Achilles son of Peleus, that brought countless ills upon the Achaeans. Sing, O goddess, the anger of Achilles son of Peleus, that brought countless ills upon the Achaeans. Sing, O goddess, the anger of Achilles son of Peleus, that brought countless ills upon the Achaeans. Sing, O goddess, the anger of Achilles son of Peleus, that brought countless ills upon the Achaeans. Sing, O goddess, the anger of Achilles son of Peleus, that brought countless ills upon the Achaeans. Sing, O goddess, the anger of Achilles son of Peleus, that brought countless ills upon the Achaeans. Sing, O goddess, the anger of Achilles son of Peleus, that brought countless ills upon the Achaeans. Sing, O goddess, the anger of Achilles son of Peleus, that brought countless ills upon the Achaeans. Sing, O goddess, the anger of Achilles son of Peleus, that brought countless ills upon the Achaeans. Sing, O goddess, the anger of Achilles son of Peleus, that brought countless ills upon the Achaeans. Sing, O goddess, the anger of Achilles son of Peleus, that brought countless ills upon the Achaeans. Sing, O goddess, the anger of Achilles son of Peleus, that brought countless ills upon the Achaeans. Sing, O goddess, the anger of Achilles son of Peleus, that brought countless ills upon the Achaeans. Sing, O goddess, the anger of Achilles son of Peleus, that brought countless ills upon the Achaeans. Sing, O goddess, the anger of Achilles son of Peleus, that brought countless ills upon the Achaeans. Sing, O goddess, the anger of Achilles son of Peleus, that brought countless ills upon the Achaeans. Sing, O goddess, the anger of Achilles son of Peleus, that brought countless ills upon the Achaeans. Sing, O goddess, the anger of Achilles son of Peleus, that brought countless ills upon the Achaeans. Sing, O goddess, the anger of Achilles son of Peleus, that brought countless ills upon the Achaeans. Sing, O goddess, the anger of Achilles son of Peleus, that brought countless ills upon the Achaeans. Sing, O goddess, the anger of Achilles son of Peleus, that brought countless ills upon the Achaeans. Sing, O goddess, the anger of Achilles son of Peleus, that brought countless ills upon the Achaeans. Sing, O goddess, the anger of Achilles son of Peleus, that brought countless ills upon the Achaeans. Sing, O goddess, the anger of Achilles son of Peleus, that brought countless ills upon the Achaeans. Sing, O goddess, the anger of Achilles son of Peleus, that brought countless ills upon the Achaeans. Sing, O goddess, the anger of Achilles son of Peleus, that brought countless ills upon the Achaeans. Sing, O goddess, the anger of Achilles son of Peleus, that brought countless ills upon the Achaeans. Sing, O goddess, the anger of Achilles son of Peleus, that brought countless ills upon the Achaeans. Sing, O goddess, the anger of Achilles son of Peleus, that brought countless ills upon the Achaeans. Sing, O goddess, the anger of Achilles son of Peleus, that brought countless ills upon the Achaeans. Sing, O goddess, the anger of Achilles son of Peleus, that brought countless ills upon the Achaeans. Sing, O goddess, the anger of Achilles son of Peleus, that brought countless ills upon the Achaeans. Sing, O goddess, the anger of Achilles son of Peleus, that brought countless ills upon the Achaeans. Sing, O goddess, the anger of Achilles son of Peleus, that brought countless ills upon the Achaeans. Sing, O goddess, the anger of Achilles son of Peleus, that brought countless ills upon the Achaeans. Sing, O goddess, the anger of Achilles son of Peleus, that brought countless ills upon the Achaeans. Sing, O goddess, the anger of Achilles son of Peleus, that brought countless ills upon the Achaeans. Sing, O goddess, the anger of Achilles son of Peleus, that brought countless ills upon the Achaeans. Sing, O goddess, the anger of Achilles son of Peleus, that brought countless ills upon the Achaeans. Sing, O goddess, the anger of Achilles son of Peleus, that brought countless ills upon the Achaeans. Sing, O goddess, the anger of Achilles son of Peleus, that brought countless ills upon the Achaeans. Sing, O goddess, the anger of Achilles son of Peleus, that brought countless ills upon the Achaeans. Sing, O goddess, the anger of Achilles son of Peleus, that brought countless ills upon the Achaeans. Sing, O goddess, the anger of Achilles son of Peleus, that brought countless ills upon the Achaeans. Sing, O goddess, the anger of Achilles son of Peleus, that brought countless ills upon the Achaeans. Sing, O goddess, the anger of Achilles son of Peleus, that brought countless ills upon the Achaeans. Sing, O goddess, the anger of Achilles son of Peleus, that brought countless ills upon the Achaeans. Sing, O goddess, the anger of Achilles son of Peleus, that brought countless ills upon the Achaeans. Sing, O goddess, the anger of Achilles son of Peleus, that brought countless ills upon the Achaeans. Sing, O goddess, the anger of Achilles son of Peleus, that brought countless ills upon the Achaeans. Sing, O goddess, the anger of Achilles son of Peleus, that brought countless ills upon the Achaeans. Sing, O goddess, the anger of Achilles son of Peleus, that brought countless ills upon the Achaeans. Sing, O goddess, the anger of Achilles son of Peleus, that brought countless ills upon the Achaeans. Sing, O goddess, the anger of Achilles son of Peleus, that brought countless ills upon the Achaeans. Sing, O goddess, the anger of Achilles son of Peleus, that brought countless ills upon the Achaeans. Sing, O goddess, the anger of Achilles son of Peleus, that brought countless ills upon the Achaeans. Sing, O goddess, the anger of Achilles son of Peleus, that brought countless ills upon the Achaeans. Sing, O goddess, the anger of Achilles son of Peleus, that brought countless ills upon the Achaeans. Sing, O goddess, the anger of Achilles son of Peleus, that brought countless ills upon the Achaeans. Sing, O goddess, the anger of Achilles son of Peleus, that brought countless ills upon the Achaeans. Sing, O goddess, the anger of Achilles son of Peleus, that brought countless ills upon the Achaeans. Sing, O goddess, the anger of Achilles son of Peleus, that brought countless ills upon the Achaeans. Sing, O goddess, the anger of Achilles son of Peleus, that brought countless ills upon the Achaeans. Sing, O goddess, the anger of Achilles son of Peleus, that brought countless ills upon the Achaeans. Sing, O goddess, the anger of Achilles son of Peleus, that brought countless ills upon the Achaeans. Sing, O goddess, the anger of Achilles son of Peleus, that brought countless ills upon the Achaeans. Sing, O goddess, the anger of Achilles son of Peleus, that brought countless ills upon the Achaeans. Sing, O goddess, the anger of Achilles son of Peleus, that brought countless ills upon the Achaeans. Sing, O goddess, the anger of Achilles son of Peleus, that brought countless ills upon the Achaeans. Sing, O goddess, the anger of Achilles son of Peleus, that brought countless ills upon the Achaeans. Sing, O goddess, the anger of Achilles son of Peleus, that brought countless ills upon the Achaeans. Sing, O goddess, the anger of Achilles son of Peleus, that brought countless ills upon the Achaeans. Sing, O goddess, the anger of Achilles son of Peleus, that brought countless ills upon the Achaeans. Sing, O goddess, the anger of Achilles son of Peleus, that brought countless ills upon the Achaeans. Sing, O goddess, the anger of Achilles son of Peleus, that brought countless ills upon the Achaeans. Sing, O goddess, the anger of Achilles son of Peleus, that brought countless ills upon the Achaeans. Sing, O goddess, the anger of Achilles son of Peleus, that brought countless ills upon the Achaeans. Sing, O goddess, the anger of Achilles son of Peleus, that brought countless ills upon the Achaeans. Sing, O goddess, the anger of Achilles son of Peleus, that brought countless ills upon the Achaeans. Sing, O goddess, the anger of Achilles son of Peleus, that brought countless ills upon the Achaeans. Sing, O goddess, the anger of Achilles son of Peleus, that brought countless ills upon the Achaeans. Sing, O goddess, the anger of Achilles son of Peleus, that brought countless ills upon the Achaeans. Sing, O goddess, the anger of Achilles son of Peleus, that brought countless ills upon the Achaeans. Sing, O goddess, the anger of Achilles son of Peleus, that brought countless ills upon the Achaeans. Sing, O goddess, the anger of Achilles son of Peleus, that brought countless ills upon the Achaeans. Sing, O goddess, the anger of Achilles son of Peleus, that brought countless ills upon the Achaeans. Sing, O goddess, the anger of Achilles son of Peleus, that brought countless ills upon the Achaeans. Sing, O goddess, the anger of Achilles son of Peleus, that brought countless ills upon the Achaeans. Sing, O goddess, the anger of Achilles son of Peleus, that brought countless ills upon the Achaeans. Sing, O goddess, the anger of Achilles son of Peleus, that brought countless ills upon the Achaeans. Sing, O goddess, the anger of Achilles son of Peleus, that brought countless ills upon the Achaeans. Sing, O goddess, the anger of Achilles son of Peleus, that brought countless ills upon the Achaeans. Sing, O goddess, the anger of Achilles son of Peleus, that brought countless ills upon the Achaeans. Sing, O goddess, the anger of Achilles son of Peleus, that brought countless ills upon the Achaeans. Sing, O goddess, the anger of Achilles son of Peleus, that brought countless ills upon the Achaeans. Sing, O goddess, the anger of Achilles son of Peleus, that brought countless ills upon the Achaeans. Sing, O goddess, the anger of Achilles son of Peleus, that brought countless ills upon the Achaeans. Sing, O goddess, the anger of Achilles son of Peleus, that brought countless ills upon the Achaeans. Sing, O goddess, the anger of Achilles son of Peleus, that brought countless ills upon the Achaeans. Sing, O goddess, the anger of Achilles son of Peleus, that brought countless ills upon the Achaeans. Sing, O goddess, the anger of Achilles son of Peleus, that brought countless ills upon the Achaeans. Sing, O goddess, the anger of Achilles son of Peleus, that brought countless ills upon the Achaeans. Sing, O goddess, the anger of Achilles son of Peleus, that brought countless ills upon the Achaeans. Sing, O goddess, the anger of Achilles son of Peleus, that brought countless ills upon the Achaeans. Sing, O goddess, the anger of Achilles son of Peleus, that brought countless ills upon the Achaeans. Sing, O goddess, the anger of Achilles son of Peleus, that brought countless ills upon the Achaeans. Sing, O goddess, the anger of Achilles son of Peleus, that brought countless ills upon the Achaeans. Sing, O goddess, the anger of Achilles son of Peleus, that brought countless ills upon the Achaeans. Sing, O goddess, the anger of Achilles son of Peleus, that brought countless ills upon the Achaeans. Sing, O goddess, the anger of Achilles son of Peleus, that brought countless ills upon the Achaeans. Sing, O goddess, the anger of Achilles son of Peleus, that brought countless ills upon the Achaeans. Sing, O goddess, the anger of Achilles son of Peleus, that brought countless ills upon the Achaeans. Sing, O goddess, the anger of Achilles son of Peleus, that brought countless ills upon the Achaeans. Sing, O goddess, the anger of Achilles son of Peleus, that brought countless ills upon the Achaeans. Sing, O goddess, the anger of Achilles son of Peleus, that brought countless ills upon the Achaeans. Sing, O goddess, the anger of Achilles son of Peleus, that brought countless ills upon the Achaeans. Sing, O goddess, the anger of Achilles son of Peleus, that brought countless ills upon the Achaeans. Sing, O goddess, the anger of Achilles son of Peleus, that brought countless ills upon the Achaeans. Sing, O goddess, the anger of Achilles son of Peleus, that brought countless ills upon the Achaeans. Sing, O goddess, the anger of Achilles son of Peleus, that brought countless ills upon the Achaeans. Sing, O goddess, the anger of Achilles son of Peleus, that brought countless ills upon the Achaeans. Sing, O goddess, the anger of Achilles son of Peleus, that brought countless ills upon the Achaeans. Sing, O goddess, the anger of Achilles son of Peleus, that brought countless ills upon the Achaeans. Sing, O goddess, the anger of Achilles son of Peleus, that brought countless ills upon the Achaeans. Sing, O goddess, the anger of Achilles son of Peleus, that brought countless ills upon the Achaeans. Sing, O goddess, the anger of Achilles son of Peleus, that brought countless ills upon the Achaeans. Sing, O goddess, the anger of Achilles son of Peleus, that brought countless ills upon the Achaeans. Sing, O goddess, the anger of Achilles son of Peleus, that brought countless ills upon the Achaeans. Sing, O goddess, the anger of Achilles son of Peleus, that brought countless ills upon the Achaeans. Sing, O goddess, the anger of Achilles son of Peleus, that brought countless ills upon the Achaeans. Sing, O goddess, the anger of Achilles son of Peleus, that brought countless ills upon the Achaeans. Sing, O goddess, the anger of Achilles son of Peleus, that brought countless ills upon the Achaeans. Sing, O goddess, the anger of Achilles son of Peleus, that brought countless ills upon the Achaeans. Sing, O goddess, the anger of Achilles son of Peleus, that brought countless ills upon the Achaeans. Sing, O goddess, the anger of Achilles son of Peleus, that brought countless ills upon the Achaeans. Sing, O goddess, the anger of Achilles son of Peleus, that brought countless ills upon the Achaeans. Sing, O goddess, the anger of Achilles son of Peleus, that brought countless ills upon the Achaeans. Sing, O goddess, the anger of Achilles son of Peleus, that brought countless ills upon the Achaeans. Sing, O goddess, the anger of Achilles son of Peleus, that brought countless ills upon the Achaeans. Sing, O goddess, the anger of Achilles son of Peleus, that brought countless ills upon the Achaeans. Sing, O goddess, the anger of Achilles son of Peleus, that brought countless ills upon the Achaeans. Sing, O goddess, the anger of Achilles son of Peleus, that brought countless ills upon the Achaeans. Sing, O goddess, the anger of Achilles son of Peleus, that brought countless ills upon the Achaeans. Sing, O goddess, the anger of Achilles son of Peleus, that brought countless ills upon the Achaeans. Sing, O goddess, the anger of Achilles son of Peleus, that brought countless ills upon the Achaeans. Sing, O goddess, the anger of Achilles son of Peleus, that brought countless ills upon the Achaeans. Sing, O goddess, the anger of Achilles son of Peleus, that brought countless ills upon the Achaeans. Sing, O goddess, the anger of Achilles son of Peleus, that brought countless ills upon the Achaeans. Sing, O goddess, the anger of Achilles son of Peleus, that brought countless ills upon the Achaeans. Sing, O goddess, the anger of Achilles son of Peleus, that brought countless ills upon the Achaeans. Sing, O goddess, the anger of Achilles son of Peleus, that brought countless ills upon the Achaeans. Sing, O goddess, the anger of Achilles son of Peleus, that brought countless ills upon the Achaeans. Sing, O goddess, the anger of Achilles son of Peleus, that brought countless ills upon the Achaeans. Sing, O goddess, the anger of Achilles son of Peleus, that brought countless ills upon the Achaeans. Sing, O goddess, the anger of Achilles son of Peleus, that brought countless ills upon the Achaeans. Sing, O goddess, the anger of Achilles son of Peleus, that brought countless ills upon the Achaeans. Sing, O goddess, the anger of Achilles son of Peleus, that brought countless ills upon the Achaeans. Sing, O goddess, the anger of Achilles son of Peleus, that brought countless ills upon the Achaeans. Sing, O goddess, the anger of Achilles son of Peleus, that brought countless ills upon the Achaeans. Sing, O goddess, the anger of Achilles son of Peleus, that brought countless ills upon the Achaeans. Sing, O goddess, the anger of Achilles son of Peleus, that brought countless ills upon the Achaeans. Sing, O goddess, the anger of Achilles son of Peleus, that brought countless ills upon the Achaeans. Sing, O goddess, the anger of Achilles son of Peleus, that brought countless ills upon the Achaeans. Sing, O goddess, the anger of Achilles son of Peleus, that brought countless ills upon the Achaeans. Sing, O goddess, the anger of Achilles son of Peleus, that brought countless ills upon the Achaeans. Sing, O goddess, the anger of Achilles son of Peleus, that brought countless ills upon the Achaeans. Sing, O goddess, the anger of Achilles son of Peleus, that brought countless ills upon the Achaeans. Sing, O goddess, the anger of Achilles son of Peleus, that brought countless ills upon the Achaeans. Sing, O goddess, the anger of Achilles son of Peleus, that brought countless ills upon the Achaeans. Sing, O goddess, the anger of Achilles son of Peleus, that brought countless ills upon the Achaeans. Sing, O goddess, the anger of Achilles son of Peleus, that brought countless ills upon the Achaeans. Sing, O goddess, the anger of Achilles son of Peleus, that brought countless ills upon the Achaeans.     
 
 ## [&#9664;](#-illiad-book-1)&nbsp;[&#8984;](#table-of-contents)&nbsp;[&#9654;](#-summary) &nbsp;Illiad Book 2
 Now the other gods and the armed warriors on the plain slept soundly, but Jove was wakeful, for he was thinking how to do honour to Achilles, and destroyed much people at the ships of the Achaeans.    
