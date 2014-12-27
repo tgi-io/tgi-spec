@@ -1,5 +1,7 @@
-#INTRO
-There be dragons!    
+#tgi-spec
+Run unit tests descriptive enough for use as spec and api documentation.    
+
+Javascript test and spec documentation framework.    
 
 ###Table of Contents
 
@@ -13,10 +15,7 @@ There be dragons!
 
 
 
-## [&#9664;](#-intro)&nbsp;[&#8984;](#table-of-contents)&nbsp;[&#9654;](#-illiad-book-1) &nbsp;Spec Constructor Function
-#### TGI SPEC
-Javascript test and spec documentation framework.    
-
+## [&#9664;](#-tgi-spec)&nbsp;[&#8984;](#table-of-contents)&nbsp;[&#9654;](#-illiad-book-1) &nbsp;Spec Constructor Function
 #### METHODS
 #### heading(text,function(){})
 heading test followed by optional function used for indenting structure.  The presentation may reflect this as heading levels (todo for github markdown).    
