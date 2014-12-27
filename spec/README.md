@@ -5,7 +5,7 @@ Javascript test and spec documentation framework.
 
 
 #### Spec
-- [Spec Constructor Function](#-spec-constructor-function) it is what it is
+- [Spec Constructor Function](#-spec-constructor-function) 
 
 #### Homer
 - [Illiad Book 1](#-illiad-book-1) it is what it is
@@ -48,14 +48,6 @@ throw Error('wrong');
 ```
 <blockquote><strong>Error: wrong</strong> thrown as expected
 </blockquote>
-&nbsp;<b><i>Expected results can be asynchronous:</i></b>
-```javascript
-setTimeout(function () {
-  callback(42);
-}, 0);
-```
-<blockquote>returns <strong>42</strong> as expected
-</blockquote>
 &nbsp;<b><i>Can contain one or more assertions:</i></b>
 ```javascript
 this.shouldBeTrue(2 === 2);
@@ -71,6 +63,15 @@ this.shouldThrowError(Error('fubar'), function () {
   throw Error('fubar');
 });
 ```
+&nbsp;<b><i>Expected results can be asynchronous:</i></b>
+```javascript
+this.shouldBeTrue(true); // false breaks test
+setTimeout(function () {
+  callback(42);
+}, 0);
+```
+<blockquote>returns <strong>42</strong> as expected
+</blockquote>
 &nbsp;<b><i>can log expression output:</i></b>
 ```javascript
 this.log('ponder the meaning of life: ' + 42 * 10);
