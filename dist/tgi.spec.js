@@ -7,7 +7,8 @@ var root = this;
 /**---------------------------------------------------------------------------------------------------------------------
  * tgi-spec/lib/tgi-spec.source.js
  **/
-var Spec = function () {
+var Spec = function (options) {
+  options = options || {};
   var spec = this;
   spec.scripts = []; // array of scripts
   spec.nodes = []; // array of Spec.Node's
@@ -17,6 +18,7 @@ var Spec = function () {
   spec.muted = false;
   spec.mutedTestsCreated = 0;
   spec.muteCount = 0;
+  spec.timeOut = options.timeOut || 500;
 };
 Spec.prototype.test = function (testSource, testName, testDescription, testScript) {
   this.scripts.push({
@@ -68,6 +70,7 @@ Spec.prototype.runTests = function (callback) {
 };
 Spec.prototype.completionCheck = function (force) {
   var spec = this;
+  console.log('completionCheck ' + spec.testsPending);
   if (!spec.testsPending || force) {
     clearTimeout(spec.watchdog);
     spec.testCallback({
@@ -80,7 +83,7 @@ Spec.prototype.completionCheck = function (force) {
     // Give time for async to finish
     spec.watchdog = spec.watchdog || setTimeout(function () {
       spec.completionCheck(true); // force completion
-    }, 500);
+    }, spec.timeOut);
   }
 };
 Spec.prototype.githubMarkdown = function () {
@@ -140,7 +143,6 @@ Spec.prototype.githubMarkdown = function () {
       }
     }
     return text + '\n\n';
-
   }
 
   /**
@@ -477,10 +479,10 @@ Spec.prototype.mute = function (arg) {
     if (!spec.muteCount)
       spec.muted = false;
   }
-  if (spec.testCallback)
-    spec.testCallback({log: 'MUTE ' + (arg ? 'ON' : 'OFF') + ' COUNT ' + spec.muteCount});
-  else
-    console.log('*** MUTE '+ (arg ? 'ON' : 'OFF') + ' ***');
+  //if (spec.testCallback)
+  //  spec.testCallback({log: 'MUTE ' + (arg ? 'ON' : 'OFF') + ' COUNT ' + spec.muteCount});
+  //else
+  //  console.log('*** MUTE ' + (arg ? 'ON' : 'OFF') + ' ***');
 
   return {testsCreated: spec.mutedTestsCreated};
 };

@@ -1,8 +1,7 @@
 /**---------------------------------------------------------------------------------------------------------------------
  * tgi-spec/spec/html-runner.js
  **/
-
-var spec = new Spec();
+var spec = new Spec({timeOut:3000});
 testSpec(spec);
 spec.runTests(function (msg) {
   /**
