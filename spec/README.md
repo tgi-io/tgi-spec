@@ -1,7 +1,7 @@
 #tgi-spec
 Javascript test and spec documentation framework.    
 
-###Table of Contents
+##Taco Contents
 
 
 #### Spec
