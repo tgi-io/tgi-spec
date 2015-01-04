@@ -14,6 +14,6 @@ spec.runTests(function (msg) {
     console.log('*** ' + msg.testsCreated + ' Tests ' + msg.testsFailed + ' Failed ' + msg.testsPending + ' Pending ***');
     if (msg.testsFailed || msg.testsPending) process.exit(1);
   } else if (msg.log) {
-    console.log(msg.log);
+    //console.log(msg.log);
   }
 });

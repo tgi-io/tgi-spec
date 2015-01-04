@@ -109,7 +109,7 @@ Spec.prototype.githubMarkdown = function () {
           text += '#### ' + node.text;
           break;
         case 'i':
-          text += generateTOC();
+          text += generateTOC(node.tocDesc || 'Taco Contents');
           break;
         case 'e':
           text += codeBlock();
@@ -128,9 +128,9 @@ Spec.prototype.githubMarkdown = function () {
    * [What is the point?](#-point-is-this)
    * https://github.com/tgicloud/tgi-spec/blob/master/spec/README.md#-illiad-book-1
    */
-  function generateTOC() {
+  function generateTOC(tocDesc) {
     var i;
-    var text = '###Table of Contents\n';
+    var text = '##' + tocDesc + '\n';
     // todo skips first test should be overridable
     for (i = 1; i < spec.nodes.length; i++) {
       var node = spec.nodes[i];
@@ -449,9 +449,9 @@ Spec.prototype.xexample = function () { // for disabling
 /**
  * Create index / TOC
  */
-Spec.prototype.index = function () {
+Spec.prototype.index = function (tocDesc) {
   var spec = this;
-  var node = new Spec.Node({type: 'i'});
+  var node = new Spec.Node({type: 'i', tocDesc: tocDesc});
   node.muted = spec.muted;
   spec.nodes.push(node);
   return node;
