@@ -70,7 +70,7 @@ Spec.prototype.runTests = function (callback) {
 };
 Spec.prototype.completionCheck = function (force) {
   var spec = this;
-  console.log('completionCheck ' + spec.testsPending);
+  //console.log('completionCheck ' + spec.testsPending);
   if (!spec.testsPending || force) {
     clearTimeout(spec.watchdog);
     spec.testCallback({
@@ -109,7 +109,7 @@ Spec.prototype.githubMarkdown = function () {
           text += '#### ' + node.text;
           break;
         case 'i':
-          text += generateTOC(node.tocDesc || 'Taco Contents');
+          text += generateTOC(node.tocDesc || 'Table of Contents');
           break;
         case 'e':
           text += codeBlock();
@@ -451,8 +451,9 @@ Spec.prototype.xexample = function () { // for disabling
  */
 Spec.prototype.index = function (tocDesc) {
   var spec = this;
-  var node = new Spec.Node({type: 'i', tocDesc: tocDesc});
+  var node = new Spec.Node({type: 'i'});
   node.muted = spec.muted;
+  node.tocDesc = tocDesc;
   spec.nodes.push(node);
   return node;
 };
