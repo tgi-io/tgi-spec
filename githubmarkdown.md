@@ -10,7 +10,7 @@ This is the deal.  *italic* **bold** This is github flavored markdown.  You can 
 ## Emoji
 Github supports Emoji :secret:
 check it out 
-[here:link:](http://www.emoji-cheat-sheet.com "Emoji cheat sheet")
+[here :link:](http://www.emoji-cheat-sheet.com "Emoji cheat sheet")
 
 ##Unicode
 #[&#8595;](#)&nbsp;[&#9786;](#)&nbsp;[&#8593;](#) Unicode be here
