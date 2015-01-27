@@ -7,7 +7,17 @@
 ### Heading
 #### Heading
 This is the deal.  *italic* **bold** This is github flavored markdown.  You can read about it here: https://github.com/github/markup
-#Stuff
+## Emoji
+Github supports Emoji :secret:
+check it out here:
+[:link:](http://www.emoji-cheat-sheet.com/ "EMOJI CHEAT SHEET")
+
+
+# tgi-core [![Build Status](https://travis-ci.org/tgi-io/tgi-core.svg?branch=master)](https://travis-ci.org/tgi-io/tgi-core) [![Coverage Status](https://img.shields.io/coveralls/tgi-io/tgi-core.svg)](https://coveralls.io/r/tgi-io/tgi-core)
+
+
+
+##Unicode
 #[&#8595;](#)&nbsp;[&#9786;](#)&nbsp;[&#8593;](#) Unicode be here
 #[&#9664;](#)&nbsp;[&#8984;](#)&nbsp;[&#9654;](#) Unicode be here
 ##[&#9664;](#)&nbsp;[&#8984;](#)&nbsp;[&#9654;](#) Unicode be here
