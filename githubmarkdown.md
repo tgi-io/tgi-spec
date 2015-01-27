@@ -11,6 +11,7 @@ This is the deal.  *italic* **bold** This is github flavored markdown.  You can 
 Github supports Emoji :secret:
 check it out here:
 [:link:](http://www.emoji-cheat-sheet.com/ "EMOJI CHEAT SHEET")
+[here](http://www.emoji-cheat-sheet.com "Emoji cheat sheet")
 
 [I'm an inline-style link](https://www.google.com)
 
