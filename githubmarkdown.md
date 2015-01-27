@@ -9,32 +9,8 @@
 This is the deal.  *italic* **bold** This is github flavored markdown.  You can read about it here: https://github.com/github/markup
 ## Emoji
 Github supports Emoji :secret:
-check it out here:
-[:link:](http://www.emoji-cheat-sheet.com/ "EMOJI CHEAT SHEET")
-[(link :link:)](http://www.emoji-cheat-sheet.com "Emoji cheat sheet")
-
-[I'm an inline-style link](https://www.google.com)
-
-[I'm an inline-style link with title](https://www.google.com "Google's Homepage")
-
-[I'm a reference-style link][Arbitrary case-insensitive reference text]
-
-[I'm a relative reference to a repository file](../blob/master/LICENSE)
-
-[You can use numbers for reference-style link definitions][1]
-
-Or leave it empty and use the [link text itself]
-
-Some text to show that the reference links can follow later.
-
-[arbitrary case-insensitive reference text]: https://www.mozilla.org
-[1]: http://slashdot.org
-[link text itself]: http://www.reddit.com
-
-
-# tgi-core [![Build Status](https://travis-ci.org/tgi-io/tgi-core.svg?branch=master)](https://travis-ci.org/tgi-io/tgi-core) [![Coverage Status](https://img.shields.io/coveralls/tgi-io/tgi-core.svg)](https://coveralls.io/r/tgi-io/tgi-core)
-
-
+check it out 
+[here:link:](http://www.emoji-cheat-sheet.com "Emoji cheat sheet")
 
 ##Unicode
 #[&#8595;](#)&nbsp;[&#9786;](#)&nbsp;[&#8593;](#) Unicode be here
