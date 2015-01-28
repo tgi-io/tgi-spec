@@ -354,23 +354,31 @@ Spec.Test = function (spec, expectedValue, testFunction, example) {
  */
 Spec.Test.prototype.shouldBeTrue = function (expression) {
   this.assertionsMade++;
-  if (expression !== true)
+  if (expression !== true) {
+    console.error('assertion failed ');
     this.assertionsFailed++;
+  }
 };
 Spec.Test.prototype.shouldBeFalse = function (expression) {
   this.assertionsMade++;
-  if (expression !== false)
+  if (expression !== false) {
+    console.error('assertion failed ');
     this.assertionsFailed++;
+  }
 };
 Spec.Test.prototype.shouldBeTruthy = function (expression) {
   this.assertionsMade++;
-  if (!expression)
+  if (!expression) {
+    console.error('assertion failed ');
     this.assertionsFailed++;
+  }
 };
 Spec.Test.prototype.shouldBeFalsy = function (expression) {
   this.assertionsMade++;
-  if (expression != false) // jshint ignore:line
+  if (expression != false) {// jshint ignore:line
+    console.error('assertion failed ');
     this.assertionsFailed++;
+  }
 };
 Spec.Test.prototype.shouldThrowError = function (err, func) {
   var gotError = false;
@@ -390,7 +398,7 @@ Spec.Test.prototype.shouldThrowError = function (err, func) {
  * Logging
  **/
 Spec.Test.prototype.log = function (stuff) {
-  this.stuffLogged.push(stuff);
+  this.stuffLogged.unshift(stuff);
 };
 
 /**
