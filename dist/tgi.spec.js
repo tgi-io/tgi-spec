@@ -92,6 +92,7 @@ Spec.prototype.githubMarkdown = function () {
   var i;
   for (i = 0; i < spec.nodes.length; i++) {
     var node = spec.nodes[i];
+    var toc = node.tocDesc || 'table-of-contents';
     if (!node.muted) {
       if (i)
         text += '\n';
@@ -100,9 +101,9 @@ Spec.prototype.githubMarkdown = function () {
           if (i === 0) {
             text += '#' + node.text;
           } else if (isLastLink(i)) {
-            text += '## [&#9664;](' + getPreviousLink(i) + ')&nbsp;[&#8984;](#table-of-contents) &nbsp;' + node.text;
+            text += '## [&#9664;](' + getPreviousLink(i) + ')&nbsp;[&#8984;](#' + toc + ') &nbsp;' + node.text;
           } else {
-            text += '## [&#9664;](' + getPreviousLink(i) + ')&nbsp;[&#8984;](#table-of-contents)&nbsp;[&#9654;](' + getNextLink(i) + ') &nbsp;' + node.text;
+            text += '## [&#9664;](' + getPreviousLink(i) + ')&nbsp;[&#8984;](#' + toc + ')&nbsp;[&#9654;](' + getNextLink(i) + ') &nbsp;' + node.text;
           }
           break;
         case 'h':
