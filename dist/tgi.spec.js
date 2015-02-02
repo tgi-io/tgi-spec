@@ -100,7 +100,7 @@ Spec.prototype.githubMarkdown = function () {
           if (i === 0) {
             text += '#' + node.text;
           } else if (isLastLink(i)) {
-            text += '## [&#9664;](' + getPreviousLink(i) + ')&nbsp;[&#8984;](#table-of-contents) &nbsp;' + node.text;
+            text += '## [&#9664;](' + getPreviousLink(i) + ')&nbsp;[:scroll:](#table-of-contents) &nbsp;' + node.text;
           } else {
             text += '## [&#9664;](' + getPreviousLink(i) + ')&nbsp;[&#8984;](#table-of-contents)&nbsp;[&#9654;](' + getNextLink(i) + ') &nbsp;' + node.text;
           }
