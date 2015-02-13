@@ -67,7 +67,7 @@ this.shouldThrowError(Error('fubar'), function () {
 ```javascript
 this.shouldBeTrue(true); // false breaks test
 setTimeout(function () {
-  callback(42);
+  //callback(42); // comment out to test timeouts
 }, 0);
 ```
 <blockquote>returns <strong>42</strong> as expected
