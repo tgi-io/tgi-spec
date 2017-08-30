@@ -69,6 +69,37 @@ Spec.prototype.runTests = function (callback) {
   spec.paragraph('This documentation generated with https://github.com/tgicloud/tgi-spec.<br>TODO put testin stats here.');
 };
 Spec.prototype.completionCheck = function (force) {
+
+  function shallowStringify(obj, onlyProps, skipTypes) {
+    var objType = typeof(obj);
+    if(['function', 'undefined'].indexOf(objType)>=0) {
+      return objType;
+    } else if(['string', 'number', 'boolean'].indexOf(objType)>=0) {
+      return obj; // will toString
+    }
+    // objType == 'object'
+    var res = '{';
+    for (var p in obj) { // property in object
+      if(typeof(onlyProps)!=='undefined' && onlyProps) {
+        // Only show property names as values may show too much noise.
+        // After this you can trace more specific properties to debug
+        res += p+', ';
+      } else {
+        var valType = typeof(obj[p]);
+        if(typeof(skipTypes)=='undefined') {
+          skipTypes = ['function'];
+        }
+        if(skipTypes.indexOf(valType)>=0) {
+          res += p+': '+valType+', ';
+        } else {
+          res += p+': '+obj[p]+', ';
+        }
+      }
+    }
+    res += '}';
+    return res;
+  }
+
   var spec = this;
   //console.log('completionCheck ' + spec.testsPending);
   if (!spec.testsPending || force) {
@@ -80,10 +111,8 @@ Spec.prototype.completionCheck = function (force) {
       for (var i = 0; i < this.nodes.length; i++) {
         var node = this.nodes[i];
         if (node.type=='e' && node.test.testAsync && !node.test.asyncCalledBack) {
-          // console.log(JSON.stringify(node));
-          console.log(node.text + ': ' + JSON.stringify(node.test));
+          console.log(node.text + ': ' + shallowStringify(node.test));
         }
-
       }
     }
     /**

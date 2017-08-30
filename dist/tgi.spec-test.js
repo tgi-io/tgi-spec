@@ -53,7 +53,7 @@ spec.test('lib/tgi-spec', 'Spec Constructor Function', '', function (callback) {
         this.shouldBeFalse(0.1 + 0.2 === 0.3);
         this.shouldBeTruthy('To thine own self be true');
         this.shouldBeFalsy('');
-        this.shouldBeTruthy(42);
+        this.shouldBeTruthy(420);
         this.shouldBeFalsy(0);
         this.shouldThrowError('*', function () { // Any error
           throw Error();
