@@ -15,7 +15,7 @@ var testSpec = function(spec) {
 //spec.mute(true);
 spec.test('lib/tgi-spec-intro', 'tgi-spec', '', function (callback) {
   spec.paragraph('Javascript test and spec documentation framework.');
-  spec.index('##Custom TOC Anchor Description');
+  spec.index('Custom TOC Anchor Description');
 });
 
 /**
